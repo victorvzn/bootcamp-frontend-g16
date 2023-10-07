@@ -22,4 +22,30 @@ main {
   background-color: red;
   width: 560px;
   height: 400px;
+
+  display: flex;
+}
+
+.photo {
+  background-color: blue;
+  /* width: 50%; */
+  width: 280px;
+  background-image: url(./images/image-product-desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.content {
+  background-color: hsl(0, 0%, 100%);
+  /* width: 50%; */
+  width: 280px;
+  padding: 28px;
+}
+
+.content h3 {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 7px;
+  color: hsl(228, 12%, 48%);
 }
