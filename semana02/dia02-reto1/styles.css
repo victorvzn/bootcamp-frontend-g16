@@ -19,9 +19,9 @@ body {
 }
 
 main {
-  background-color: red;
+  /* background-color: red; */
   width: 560px;
-  height: 400px;
+  min-height: 400px;
 
   display: flex;
 }
@@ -33,6 +33,9 @@ main {
   background-image: url(./images/image-product-desktop.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+
+  border-radius: 14px 0 0 14px;
+  box-shadow: 1px 1px 3px #ccc;
 }
 
 .content {
@@ -40,6 +43,9 @@ main {
   /* width: 50%; */
   width: 280px;
   padding: 28px;
+
+  border-radius: 0 14px 14px 0;
+  box-shadow: 1px 1px 3px #ccc;
 }
 
 .content h3 {
@@ -48,4 +54,50 @@ main {
   font-size: 14px;
   letter-spacing: 7px;
   color: hsl(228, 12%, 48%);
+}
+
+.content h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: hsl(212, 21%, 14%);
+}
+
+.content p {
+  color: hsl(228, 12%, 48%);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.content div {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.content span {
+  font-family: 'Fraunces', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: hsl(158, 36%, 37%);
+}
+
+.content s {
+  color: hsl(228, 12%, 48%);
+}
+
+.content button {
+  border: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  background-color: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+  padding: 14px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  border-radius: 7px;
+  margin-top: 20px;
+  cursor: pointer;
 }
