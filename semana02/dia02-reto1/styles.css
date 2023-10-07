@@ -10,6 +10,12 @@ body {
   background-color: hsl(30, 38%, 92%);
   font-size: 14px;
   font-family: 'Montserrat', sans-serif;
+
+  height: 100vh; /* Viewport Height - alto de lo visible pantalla*/
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
