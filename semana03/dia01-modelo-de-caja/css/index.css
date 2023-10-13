@@ -24,8 +24,22 @@
   --accent-cyan: hsl(176, 68%, 64%);
   --accent-blue: hsl(198, 60%, 50%);
   --accent-light-red: hsl(0, 100%, 63%);
+
+  --neutral-white: hsl(0, 0%, 100%);
+}
+
+/* RESETs */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: var(--font-size);
 }
 
 body {
-  background-color: var(--color);
+  background-color: var(--primary-dark-blue-intro);
+  color: var(--neutral-white);
 }
