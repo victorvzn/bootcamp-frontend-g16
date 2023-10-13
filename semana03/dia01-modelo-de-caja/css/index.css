@@ -80,3 +80,52 @@ img {
   display: flex;
   gap: 3rem; /* 1rem = 14px (html) */
 }
+
+.hero {
+  border: 1px solid red;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  padding-top: 3rem;
+  padding-bottom: 12rem;
+}
+
+.hero__title {
+  width: 720px;
+
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: 2.5rem;
+
+  text-align: center;
+}
+
+.hero__text {
+  width: 720px;
+
+  font-family: var(--font-secondary);
+  font-size: 1.2rem;
+  padding: 0 7rem;
+
+  text-align: center;
+}
+
+.hero__button {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
+  border: 0;
+  border-radius: 7rem;
+  padding: 1rem 1.5rem;
+  min-width: 220px;
+  color: var(--neutral-white);
+  background:
+    linear-gradient(
+      90deg,
+      var(--accent-cyan) 0%,
+      var(--accent-blue) 35%
+    )
+  ;
+}
