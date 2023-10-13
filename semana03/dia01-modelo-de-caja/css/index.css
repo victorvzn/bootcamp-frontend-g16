@@ -43,3 +43,27 @@ body {
   background-color: var(--primary-dark-blue-intro);
   color: var(--neutral-white);
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  /* TODO: RWD para imágenes */
+}
+
+.wrapper {
+  width: 1440px;
+  /* TODO: Adaptar el ancho de la página a dispositivos móviles */
+}
+
+.header {
+  border: 1px solid red;
+
+  font-family: var(--font-primary);
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+}
