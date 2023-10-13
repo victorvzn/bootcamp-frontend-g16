@@ -82,7 +82,7 @@ img {
 }
 
 .hero {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
   display: flex;
   flex-direction: column;
@@ -128,4 +128,12 @@ img {
       var(--accent-blue) 35%
     )
   ;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 340px 340px;
+  justify-content: center;
+  gap: 5rem;
+  background-color: var(--primary-dark-blue-main);
 }
