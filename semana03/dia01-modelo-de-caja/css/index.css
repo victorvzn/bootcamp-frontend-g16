@@ -137,3 +137,19 @@ img {
   gap: 5rem;
   background-color: var(--primary-dark-blue-main);
 }
+
+.feature {
+  text-align: center;
+}
+
+.feature__title {
+  border: 1px solid red;
+  font-family: var(--font-primary);
+  margin-top: 1.3rem;
+}
+
+.feature__text {
+  border: 1px solid green;
+  font-family: var(--font-secondary);
+  margin-top: 1rem;
+}
