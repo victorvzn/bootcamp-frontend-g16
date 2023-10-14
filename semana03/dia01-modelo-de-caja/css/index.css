@@ -121,7 +121,7 @@ img {
 .hero__button {
   font-family: var(--font-primary);
   font-weight: var(--font-weight-bold);
-  border: 0;
+  border: none;
   border-radius: 7rem;
   padding: 1rem 1.5rem;
   min-width: 220px;
@@ -207,8 +207,13 @@ img {
 }
 
 .testimonials {
+  background-color: var(--primary-dark-blue-main);
+
   display: flex;
+  justify-content: center;
   gap: 2rem;
+
+  padding-top: 8rem;
 }
 
 .testimonial {
@@ -222,17 +227,78 @@ img {
 .testimonial__text {
   margin-bottom: 2rem;
   line-height: 1.5;
+  width: 21rem;
 }
 
 .testimonial__profile {
   display: flex;
   gap: .5rem;
+
+  font-size: .8rem;
 }
 
 .testimonial__profile img {
   border-radius: 50px;
 }
 
+.testimonial__profile h4 {
+  font-weight: var(--font-weight-bold);
+}
+
 .testimonial__profile h5 {
   font-weight: var(--font-weight-regular);
 }
+
+.early-access {
+  border: 1px solid red;
+
+  font-family: var(--font-primary);
+  width: 53rem;
+  padding: 2rem;
+
+  background-color: var(--primary-dark-blue-testimonials);
+  border-radius: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.early-access h2 {
+  font-size: 2rem;
+}
+
+.early-access p {
+  text-align: center;
+}
+
+.early-access form {
+  display: flex;
+  gap: 2rem;
+}
+
+.early-access input[type=text] {
+  border-radius: 1.5rem;
+  border: none;
+  padding: 1rem 2rem;
+  width: 30rem;
+}
+
+.early-access input[type=submit] {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
+  border: none;
+  border-radius: 7rem;
+  padding: 1rem 1.5rem;
+  min-width: 120px;
+  color: var(--neutral-white);
+  background:
+    linear-gradient(
+      90deg,
+      var(--accent-cyan) 0%,
+      var(--accent-blue) 35%
+    )
+  ;
+}
+
