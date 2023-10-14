@@ -205,3 +205,34 @@ img {
   width: 10.8rem;
   padding-bottom: 0.5rem; /* 0.5rem = 7px */
 }
+
+.testimonials {
+  display: flex;
+  gap: 2rem;
+}
+
+.testimonial {
+  background-color: var(--primary-dark-blue-testimonials);
+
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+
+  font-family: var(--font-primary);
+}
+
+.testimonial__text {
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.testimonial__profile {
+  display: flex;
+  gap: .5rem;
+}
+
+.testimonial__profile img {
+  border-radius: 50px;
+}
+
+.testimonial__profile h5 {
+  font-weight: var(--font-weight-regular);
+}
