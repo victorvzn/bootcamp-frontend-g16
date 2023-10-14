@@ -91,6 +91,11 @@ img {
 
   padding-top: 3rem;
   padding-bottom: 12rem;
+
+  background-image: url(../images/bg-curvy-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
 }
 
 .hero__title {
@@ -139,17 +144,22 @@ img {
 }
 
 .feature {
-  text-align: center;
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 .feature__title {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   font-family: var(--font-primary);
-  margin-top: 1.3rem;
+  /* margin-top: 1.3rem; */
 }
 
 .feature__text {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   font-family: var(--font-secondary);
-  margin-top: 1rem;
+  text-align: center;
+  /* margin-top: 1rem; */
 }
