@@ -234,7 +234,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: 30rem;
+  width: min(100% - 3rem, 30rem);
 }
 
 .how_works__title {
@@ -304,7 +304,7 @@ img {
 .testimonial__text {
   margin-bottom: 2rem;
   line-height: 1.5;
-  width: 21rem;
+  width: min(100% - 3rem, 21rem);
 }
 
 .testimonial__profile {
@@ -330,7 +330,7 @@ img {
   /* border: 1px solid red; */
 
   font-family: var(--font-primary);
-  width: 53rem;
+  width: min(100% - 3rem, 53rem);
   padding: 2rem;
 
   background-color: var(--primary-dark-blue-testimonials);
@@ -360,13 +360,11 @@ img {
 .early-access form {
   display: flex;
   gap: 2rem;
+
+  width: 100%;
 }
 
 @media (max-width: 768px) { /* SE APLICA A DISPOSITIVOS COMO TABLES Y CELULARES */
-  .early-access {
-    width: 100%;
-  }
-
   .early-access form  {
     flex-direction: column;
   }
@@ -376,7 +374,7 @@ img {
   border-radius: 1.5rem;
   border: none;
   padding: 1rem 2rem;
-  width: 30rem;
+  width: min(100%, 30rem);
 }
 
 .early-access input[type=submit] {
