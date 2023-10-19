@@ -44,6 +44,8 @@ html {
 body {
   background-color: var(--primary-dark-blue-intro);
   color: var(--neutral-white);
+
+  position: relative;
 }
 
 a {
@@ -85,6 +87,10 @@ img {
   .header {
     flex-direction: column;
   }
+}
+
+.header__logo {
+  width: 176px;
 }
 
 .header__nav {
@@ -468,4 +474,12 @@ img {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+.top {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  background-color: #333;
+  padding: 1rem;
 }

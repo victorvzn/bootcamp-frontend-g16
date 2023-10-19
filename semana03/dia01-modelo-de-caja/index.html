@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-  <header class="header wrapper">
-    <img src="./images/logo.svg" />
+  <header id="top" class="header wrapper">
+    <img class="header__logo" src="./images/logo.svg" />
 
     <nav>
       <ul class="header__nav">
@@ -133,7 +133,7 @@
   </main>
 
   <footer class="footer">
-    <section class="early-access">
+    <section id="earlyAccess" class="early-access">
       <h2>Get early access today</h2>
       
       <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</p>
@@ -172,7 +172,7 @@
         </div>
 
         <div class="footer-info__links">
-          <a href="#">Contact Us</a>
+          <a href="#earlyAccess">Contact Us</a>
           <a href="#">Terms</a>
           <a href="#">Privacy</a>
         </div>
@@ -203,4 +203,6 @@
       </div>
     </div>
   </footer>
+
+  <a href="#top" class="top">Ir arriba</a>
 </body>
