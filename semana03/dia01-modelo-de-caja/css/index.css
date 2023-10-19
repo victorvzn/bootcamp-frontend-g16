@@ -115,6 +115,12 @@ img {
   background-size: contain;
 }
 
+@media (max-width: 768px) {
+  .hero {
+    background-image: url(../images/bg-curvy-mobile.svg);
+  }
+}
+
 .hero__title {
   /* width: 720px; */
   width: min(100% - 3rem, 720px);
@@ -286,6 +292,7 @@ img {
 @media (max-width: 768px) { /* SE APLICA A DISPOSITIVOS COMO TABLES Y CELULARES */
   .testimonials {
     flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -299,12 +306,14 @@ img {
   border-radius: 0.5rem;
 
   border: 7px solid rgba(222, 222, 222, 0.1);
+
+  width: min(100% - 3rem, 23rem);
 }
 
 .testimonial__text {
   margin-bottom: 2rem;
   line-height: 1.5;
-  width: min(100% - 3rem, 21rem);
+  /* width: min(100% - 3rem, 21rem); */
 }
 
 .testimonial__profile {
