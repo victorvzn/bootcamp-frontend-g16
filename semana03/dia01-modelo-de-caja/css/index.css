@@ -253,6 +253,13 @@ img {
   padding-bottom: 0.5rem; /* 0.5rem = 7px */
 }
 
+.how_works__button:hover {
+  font-weight: var(--font-weight-regular);
+  text-decoration: none;
+  color: var(--neutral-white);
+  border-bottom: 1px solid var(--neutral-white);
+}
+
 .testimonials {
   background-color: var(--primary-dark-blue-main);
 
@@ -369,6 +376,16 @@ img {
       var(--accent-blue) 35%
     )
   ;
+}
+
+.early-access input[type=submit]:hover {
+  background: linear-gradient(
+    90deg,
+    var(--accent-cyan) 35%,
+    var(--accent-blue) 100%
+  );
+  /* background-color: var(--accent-cyan); */
+  cursor: pointer;
 }
 
 .footer {
