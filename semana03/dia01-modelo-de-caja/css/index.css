@@ -49,6 +49,12 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  /* color: red; */
+  font-weight: var(--font-weight-bold);
+  text-decoration: underline;
+}
+
 img {
   /* TODO: RWD para imágenes */
   max-width: 100%;
@@ -151,6 +157,17 @@ img {
       var(--accent-blue) 35%
     )
   ;
+  transition: all 1s ease;
+}
+
+.hero__button:hover {
+  background: linear-gradient(
+    90deg,
+    var(--accent-cyan) 35%,
+    var(--accent-blue) 100%
+  );
+  /* background-color: var(--accent-cyan); */
+  cursor: pointer;
 }
 
 .features {
