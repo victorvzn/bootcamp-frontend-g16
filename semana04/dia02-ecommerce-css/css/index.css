@@ -24,5 +24,33 @@ font-family: 'Kumbh Sans', sans-serif;
   --neutral-black: hsl(0, 0%, 0%);
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+
+  /* border: 1px solid red; */
+}
+
+html {
+  font-size: var(--font-size);
+}
+
 body {
+  font-family: var(--font-primary);
+}
+
+img {
+  /* RWD para imágenes*/
+  max-width: 100%;
+  height: auto;
+}
+
+.header {
+  border: 1px solid red;
+
+  height: 7.5625rem; /* 121px / 16px */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
