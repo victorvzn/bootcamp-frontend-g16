@@ -48,9 +48,17 @@ img {
 .header {
   border: 1px solid red;
 
-  height: 7.5625rem; /* 121px / 16px */
+  height: 4.5rem; /* 72 / 16px */
 
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  padding: 1.5rem;
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
