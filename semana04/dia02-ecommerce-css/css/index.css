@@ -45,6 +45,12 @@ img {
   height: auto;
 }
 
+.wrapper {
+  width: min(100% - 3rem, 1280px);
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
 .header {
   /* border: 1px solid red; */
 
@@ -63,10 +69,22 @@ img {
   gap: 0.5rem;
 }
 
+.product-detail {
+  display: grid;
+
+  grid-template-columns: 55% 1fr;
+}
+
 .gallery {
   position: relative;
 
   /* border: 1px solid red; */
+}
+
+@media (min-width: 768px) {
+  .gallery {
+    /* width: 50rem; */
+  }
 }
 
 .gallery__prev,
@@ -97,7 +115,7 @@ img {
 .product {
   /* border: 1px solid red; */
 
-  padding: 1.5rem;
+  padding: 4rem;
 }
 
 .product__subtitle {
