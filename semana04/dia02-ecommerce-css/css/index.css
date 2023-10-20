@@ -125,6 +125,7 @@ img {
   
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .product__wrapper {
@@ -148,6 +149,37 @@ img {
   font-weight: var(--font-weight-bold);
 }
 
+.product__price-with-discount {
+  font-size: 1.1rem;
+
+  color: var(--neutral-dark-grayish-blue);
+  text-decoration: line-through;
+}
+
 .product__qty {
   margin-top: 1rem;
+
+  width: 100%;
+  /* border: 1px solid red; */
+
+  display: flex;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: center;
+
+  background-color: var(--neutral-light-grayish-blue);
+  border-radius: .5rem;
+}
+
+.product__qty button {
+  width: 3rem;
+  height: 3rem;
+  border: 0;
+  background-color: var(--neutral-light-grayish-blue);
+}
+
+.product__qty span {
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-bold);
+  background-color: var(--neutral-light-grayish-blue);
 }
