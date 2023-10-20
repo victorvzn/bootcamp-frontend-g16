@@ -1,0 +1,32 @@
+.header {
+  /* border: 1px solid red; */
+
+  font-family: var(--font-primary);
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+}
+
+.header__logo {
+  width: 176px;
+}
+
+.header__nav {
+  /* border: 1px solid yellow; */
+
+  list-style: none;
+  padding: 10px;
+  margin: 10px;
+
+  display: flex;
+  gap: 3rem; /* 1rem = 14px (html) */
+}

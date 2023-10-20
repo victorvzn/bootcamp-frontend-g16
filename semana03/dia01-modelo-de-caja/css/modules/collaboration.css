@@ -1,0 +1,16 @@
+.collaboration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+
+  background-color: var(--primary-dark-blue-main);
+
+  padding-top: 8rem;
+}
+
+@media (max-width: 768px) { /* SE APLICA A DISPOSITIVOS COMO TABLES Y CELULARES */
+  .collaboration {
+    flex-direction: column;
+  }
+}

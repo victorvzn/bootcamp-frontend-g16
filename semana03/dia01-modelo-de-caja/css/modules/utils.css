@@ -1,0 +1,13 @@
+.wrapper {
+  /* width: 1440px; */
+  /* TODO: Adaptar el ancho de la página a dispositivos móviles */
+  width: min(100% - 3rem, 1440px);
+}
+
+.top {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  background-color: #333;
+  padding: 1rem;
+}

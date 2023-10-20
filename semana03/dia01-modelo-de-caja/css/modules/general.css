@@ -1,0 +1,27 @@
+html {
+  font-size: var(--font-size);
+}
+
+body {
+  background-color: var(--primary-dark-blue-intro);
+  color: var(--neutral-white);
+
+  position: relative;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  /* color: red; */
+  font-weight: var(--font-weight-bold);
+  text-decoration: underline;
+}
+
+img {
+  /* TODO: RWD para imágenes */
+  max-width: 100%;
+  height: auto;
+}

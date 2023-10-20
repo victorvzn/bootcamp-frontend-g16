@@ -1,0 +1,85 @@
+.hero {
+  /* border: 1px solid red; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  padding-top: 3rem;
+  padding-bottom: 12rem;
+
+  background-image: url(../../images/bg-curvy-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background-image: url(../../images/bg-curvy-mobile.svg);
+  }
+}
+
+.hero__title {
+  /* width: 720px; */
+  width: min(100% - 3rem, 720px);
+
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: 2.5rem;
+
+  text-align: center;
+}
+
+.hero__text {
+  /* width: 720px; */
+  width: min(100% - 3rem, 720px);
+
+  font-family: var(--font-secondary);
+  font-size: 1.2rem;
+  padding: 0 7rem;
+
+  text-align: center;
+}
+
+/*
+576px -> pantallas pequeñas (celulares)
+768px -> pantallas pequeñas (tablets y celulares)
+992px -> pantallas medianas (Desktop)
+1200px -> pantallas grandes (Desktops, TVs)
+*/
+
+@media (max-width: 768px) {
+  .hero__text {
+    padding: 0;
+  }
+}
+
+.hero__button {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
+  border: none;
+  border-radius: 7rem;
+  padding: 1rem 1.5rem;
+  min-width: 220px;
+  color: var(--neutral-white);
+  background:
+    linear-gradient(
+      90deg,
+      var(--accent-cyan) 0%,
+      var(--accent-blue) 35%
+    )
+  ;
+  transition: all 1s ease;
+}
+
+.hero__button:hover {
+  background: linear-gradient(
+    90deg,
+    var(--accent-cyan) 35%,
+    var(--accent-blue) 100%
+  );
+  /* background-color: var(--accent-cyan); */
+  cursor: pointer;
+}

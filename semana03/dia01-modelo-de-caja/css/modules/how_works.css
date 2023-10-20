@@ -1,0 +1,41 @@
+.how_works {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: min(100% - 3rem, 30rem);
+}
+
+.how_works__title {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: 2.5rem;
+}
+
+.how_works__text {
+  font-family: var(--font-secondary);
+}
+
+.how_works__button {
+  font-family: var(--font-secondary);
+  color: var(--accent-cyan);
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  border-bottom: 1px solid var(--accent-cyan);
+  /* margin-right: auto; */
+  width: 10.8rem;
+  padding-bottom: 0.5rem; /* 0.5rem = 7px */
+}
+
+.how_works__button:hover {
+  font-weight: var(--font-weight-regular);
+  text-decoration: none;
+  color: var(--neutral-white);
+  border-bottom: 1px solid var(--neutral-white);
+}
+
+.how_works__button:hover svg circle {
+  fill: white;
+}
