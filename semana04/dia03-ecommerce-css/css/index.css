@@ -95,6 +95,10 @@ img {
   /* border: 1px solid red; */
 }
 
+.gallery__image {
+  border-radius: 1rem;
+}
+
 .gallery__prev,
 .gallery__next {
   width: 40px;
@@ -118,6 +122,13 @@ img {
   position: absolute;
   right: 1rem;
   top: 50%;
+}
+
+@media (min-width: 768px) {
+  .gallery__prev,
+  .gallery__next {
+    display: none;
+  }
 }
 
 .gallery-product-thumbnails {
