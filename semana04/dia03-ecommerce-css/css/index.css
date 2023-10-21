@@ -120,6 +120,19 @@ img {
   top: 50%;
 }
 
+.gallery-product-thumbnails {
+  display: flex;
+
+  justify-content: space-between;
+  padding-top: 1.5rem;
+}
+
+.gallery-product-thumbnails img {
+  /* border: 1px solid green; */
+
+  border-radius: .5rem;
+}
+
 .product {
   /* border: 1px solid red; */
 
