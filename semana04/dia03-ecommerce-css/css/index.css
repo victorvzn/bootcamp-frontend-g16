@@ -144,6 +144,15 @@ img {
   border-radius: .5rem;
 }
 
+.gallery-product-thumbnails--active {
+  border: 3px solid var(--primary-orange);
+}
+
+.gallery-product-thumbnails--active img {
+  opacity: .5;
+}
+
+
 .product {
   /* border: 1px solid red; */
 
