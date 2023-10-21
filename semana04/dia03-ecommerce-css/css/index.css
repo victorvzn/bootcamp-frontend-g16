@@ -127,6 +127,14 @@ input[type=checkbox]:checked ~ .header__links--menu {
     display: none;
   }
 
+  .header__links--menu {
+    all: unset;
+  }
+
+  .header__links--menu label {
+    display: none;
+  }
+
   .header__links {
     display: flex;
     align-items: center;
@@ -135,6 +143,8 @@ input[type=checkbox]:checked ~ .header__links--menu {
     margin-left: 3rem;
 
     color: var(--neutral-dark-grayish-blue);
+
+    opacity: 1;
   }
 }
 
