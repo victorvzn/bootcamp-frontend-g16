@@ -2,6 +2,11 @@
 
 /*
 font-family: 'Kumbh Sans', sans-serif;
+
+576px  -> pantallas pequeñas (celulares)
+768px  -> pantallas pequeñas (tablets y celulares)
+992px  -> pantallas medianas (Desktop)
+1200px -> pantallas grandes (Desktops, TVs)
 */
 
 :root {
@@ -45,6 +50,17 @@ img {
   height: auto;
 }
 
+.wrapper {
+  width: min(100% - 3rem, 1200px);
+  margin: 0 auto;
+
+  border: 1px solid red;
+}
+
+.flex {
+  display: flex;
+}
+
 .header {
   /* border: 1px solid red; */
 
@@ -61,6 +77,12 @@ img {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.product-detail {
+  padding: 5rem 3rem;
+
+  gap: 5rem;
 }
 
 .gallery {
