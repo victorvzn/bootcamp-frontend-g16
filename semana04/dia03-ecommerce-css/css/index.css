@@ -79,10 +79,14 @@ img {
   gap: 0.5rem;
 }
 
-.product-detail {
-  padding: 5rem 3rem;
-
-  gap: 5rem;
+@media (min-width: 768px) {
+  .product-detail {
+    display: flex;
+  
+    padding: 5rem 3rem;
+  
+    gap: 5rem;
+  }
 }
 
 .gallery {
