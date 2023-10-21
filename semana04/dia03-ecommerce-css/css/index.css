@@ -50,6 +50,11 @@ img {
   height: auto;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .wrapper {
   width: min(100% - 3rem, 1200px);
   margin: 0 auto;
@@ -97,7 +102,13 @@ img {
   }
 
   .header__links {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    margin-left: 3rem;
+
+    color: var(--neutral-dark-grayish-blue);
   }
 }
 
