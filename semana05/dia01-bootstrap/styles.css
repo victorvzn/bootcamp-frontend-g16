@@ -1,0 +1,11 @@
+.hero {
+  padding: 10rem;
+}
+
+.hero-slide {
+  background-image: url(https://codescandy.com/coach/bootstrap-5/assets/images/hero-slide.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 700px;
+}
