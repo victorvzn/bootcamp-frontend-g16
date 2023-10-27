@@ -29,3 +29,15 @@
     width: 33%;
   }
 }
+
+.coach {
+  margin-top: 5rem;
+}
+
+.coach h2 {
+  padding: 0;
+}
+
+.coach p {
+  margin-bottom: 5rem;
+}
