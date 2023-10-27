@@ -1,0 +1,24 @@
+.card {
+  background-color: $card-bg;
+  border: 1px solid $card-border-color;
+  border-radius: $card-border-radius;
+  text-align: left;
+  margin-bottom: 1rem;
+
+  @include default-border;
+  @include custom-border(4px, orange);
+  @include custom-border(4px, orange, false);
+
+  &__header {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid $card-border-color;
+  }
+
+  &__body {
+    padding: 1rem 1.5rem;
+  }
+
+  &--success {
+    background-color: green;
+  }
+}

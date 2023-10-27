@@ -1,0 +1,16 @@
+:root {
+  --mi-variable: rgb(186, 201, 57);
+}
+
+@import 'variables';
+@import 'mixins';
+@import 'card';
+
+body {
+  background-color: $primary-color;
+  background-color: var(--mi-variable);
+  /* CSS: background-color: var(--primary-color); */
+
+  // color: white;
+  text-align: center;
+}

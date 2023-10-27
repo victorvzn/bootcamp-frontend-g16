@@ -1,0 +1,31 @@
+:root {
+  --mi-variable: rgb(186, 201, 57);
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #454545;
+  border-radius: 6px;
+  text-align: left;
+  margin-bottom: 1rem;
+  border: 5px solid blue;
+  border: 4px solid orange;
+  border: 4px dashed orange;
+}
+.card__header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #454545;
+}
+.card__body {
+  padding: 1rem 1.5rem;
+}
+.card--success {
+  background-color: green;
+}
+
+body {
+  background-color: #AADDEE;
+  background-color: var(--mi-variable);
+  /* CSS: background-color: var(--primary-color); */
+  text-align: center;
+}/*# sourceMappingURL=styles.css.map */
