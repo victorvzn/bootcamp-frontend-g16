@@ -4,9 +4,16 @@
   align-items: center;
   gap: 2.5rem; // 40px
   padding: 4rem; // 64px
+  color: $primary-color-white;
+
+  &--bg {
+    background-image: url(../images/bg.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+  }
 
   &__gretting {
-    color: $primary-color-white;
     font-size: 2rem;
     font-weight: $font-weight-bold;
     text-transform: capitalize;
@@ -18,15 +25,22 @@
   }
 
   &__title {
-    color: $primary-color-white;
     font-size: 3rem;
     font-weight: $font-weight-bold;
     text-transform: capitalize;
   }
 
   &__description {
-    color: $primary-color-white;
     font-size: 1.5rem;
     font-weight: $font-weight-regular;
   }
+
+  &__photo {
+    border-radius: 100%;
+  }
+}
+
+.stack {
+  display: flex;
+  gap: 1.5rem;
 }

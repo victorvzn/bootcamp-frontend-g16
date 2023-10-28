@@ -70,9 +70,15 @@ a {
   align-items: center;
   gap: 2.5rem;
   padding: 4rem;
+  color: #FFFFFF;
+}
+.hero--bg {
+  background-image: url(../images/bg.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
 }
 .hero__gretting {
-  color: #FFFFFF;
   font-size: 2rem;
   font-weight: 700;
   text-transform: capitalize;
@@ -82,13 +88,19 @@ a {
   text-decoration-line: underline;
 }
 .hero__title {
-  color: #FFFFFF;
   font-size: 3rem;
   font-weight: 700;
   text-transform: capitalize;
 }
 .hero__description {
-  color: #FFFFFF;
   font-size: 1.5rem;
   font-weight: 400;
+}
+.hero__photo {
+  border-radius: 100%;
+}
+
+.stack {
+  display: flex;
+  gap: 1.5rem;
 }/*# sourceMappingURL=styles.css.map */
