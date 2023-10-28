@@ -52,4 +52,43 @@ a {
 .header .header__menu a:hover {
   color: #FFB742;
   border-bottom: 2px solid #FFB742;
+}
+.header .header__links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.header .header__links--active {
+  border-radius: 100%;
+  background-color: #393646;
+  padding: 0.3rem;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 4rem;
+}
+.hero__gretting {
+  color: #FFFFFF;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.hero__gretting span {
+  color: #FFB742;
+  text-decoration-line: underline;
+}
+.hero__title {
+  color: #FFFFFF;
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.hero__description {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  font-weight: 400;
 }/*# sourceMappingURL=styles.css.map */

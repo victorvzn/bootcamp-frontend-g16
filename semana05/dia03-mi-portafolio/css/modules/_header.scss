@@ -32,4 +32,16 @@
     color: $primary-color-gold;
     border-bottom: 2px solid $primary-color-gold;
   }
+
+  .header__links {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+
+  .header__links--active {
+    border-radius: 100%;
+    background-color: $primary-color-blue1;
+    padding: .3rem;
+  }
 }
