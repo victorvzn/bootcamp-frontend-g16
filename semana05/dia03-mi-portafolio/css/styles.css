@@ -103,4 +103,22 @@ a {
 .stack {
   display: flex;
   gap: 1.5rem;
+}
+.stack__title {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+.stack__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stack__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  height: 6rem;
+  background-color: #4F4557;
+  border-radius: 0.5rem;
 }/*# sourceMappingURL=styles.css.map */
