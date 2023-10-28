@@ -1,0 +1,24 @@
+.header {
+  // border: 1px solid red;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  
+  &__logo {
+    color: $primary-color-gold;
+    font-size: 2rem; /* 1rem = 16px */
+    font-weight: $font-weight-bold;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 1.5rem;
+
+    text-transform: capitalize;
+
+    padding: 10px;
+    margin: 2rem;
+  }
+}

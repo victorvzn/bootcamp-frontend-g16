@@ -24,5 +24,22 @@ a {
 .wrapper {
   width: min(100% - 3rem, 1220px);
   margin: 0 auto;
-  border: 1px solid red;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  color: #FFB742;
+  font-size: 2rem; /* 1rem = 16px */
+  font-weight: 700;
+}
+.header__menu {
+  display: flex;
+  gap: 1.5rem;
+  text-transform: capitalize;
+  padding: 10px;
+  margin: 2rem;
 }/*# sourceMappingURL=styles.css.map */
