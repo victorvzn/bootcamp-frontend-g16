@@ -39,7 +39,17 @@ a {
 .header__menu {
   display: flex;
   gap: 1.5rem;
-  text-transform: capitalize;
   padding: 10px;
   margin: 2rem;
+}
+.header__menu a {
+  color: #FFFFFF;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.header .header__menu--active,
+.header .header__menu a:hover {
+  color: #FFB742;
+  border-bottom: 2px solid #FFB742;
 }/*# sourceMappingURL=styles.css.map */

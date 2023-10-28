@@ -16,9 +16,20 @@
     display: flex;
     gap: 1.5rem;
 
-    text-transform: capitalize;
-
     padding: 10px;
     margin: 2rem;
+  }
+
+  &__menu a {
+    color: $primary-color-white;
+    font-size: 1.125rem;
+    font-weight: $font-weight-semibold;
+    text-transform: capitalize;
+  }
+
+  .header__menu--active,
+  .header__menu a:hover {
+    color: $primary-color-gold;
+    border-bottom: 2px solid $primary-color-gold;
   }
 }
