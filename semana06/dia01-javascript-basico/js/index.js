@@ -95,4 +95,114 @@ edad2 = 36
 edad2 = 22
 
 console.log(edad2)
+console.log(typeof edad2)
 
+edad2 = "hola"
+console.log(typeof edad2)
+
+// OPERADORES MATEMÁTICOS
+
+console.log(1 + 2)
+console.log(3 - 2)
+console.log(2 * 2)
+console.log(1 / 2)
+console.log(1 % 2) // Residuo
+console.log(2 ** 3) // dos elevado al cubo
+
+// OPERADOR DE ASIGNACIÓN
+
+const genero = 'femenino'
+
+console.log(genero + '*')
+
+// OPERADORES DE COMPARACIÓN
+
+// Operador de igualdad y desigualdad no estricta
+// DEvuelven un valor booleano(true o false)
+// Este operador no toma en cuenta el tipo de dato al comparar sino solo sus valores
+
+console.log(1 == 1) // true
+console.log(1 == '1') // true
+console.log(1 != 1) // false
+
+// Operador de igualdad y desigualdad estricta (ES RECOMENDABLE USARLO CASI SIEMPRE)
+// Devuelven un valor booleano(true o false)
+// Este operador si toma en cuenta el tipo de dato y sus valores al comparar
+
+console.log(1 === 1) // true
+console.log(1 === '1') // false
+console.log(1 !== 1) // false ! ==
+
+// OPERADORES DE COMPARACIÓN, siempre devuelven un booleano
+
+console.log(8 > 5)
+console.log(5 < 1)
+console.log(8 >= 5)
+console.log(8 <= 5)
+
+// Operadores lógicos (AND, OR, NEGACIÓN)
+
+console.log(true && false) // AND
+console.log(true || false) // OR 
+console.log(!true) // NEGACIÓN
+
+// Operador de cadena (concatenación)
+
+const saludo = 'Hola, '
+const nombreCompleto = 'Victor' + ' ' + 'Villazón'
+const miEdad = 37
+
+const saludoAmigo = saludo + nombreCompleto + '. Tengo ' + miEdad + ' años'
+
+console.log(nombreCompleto)
+console.log(saludoAmigo)
+
+// EJERCICIOS
+
+// 1. Retorna true si dos strings tienen la misma longitud sino devolver false
+
+const cadena1 = 'codigo'
+const cadena2 = 'cadaga'
+
+console.log(cadena1.length)
+console.log(cadena2.length)
+
+console.log(cadena1.length === cadena2.length) // true
+
+// 2. Retornar true si un numero es menor que 40 sino devolver false
+
+const numero111 = 34
+
+console.log(numero111 < 40) // true
+
+// 3. Retornar True si un numero es menor que 60 sino devolver False
+
+const numero222 = 85
+console.log(numero222 < 60) // false
+
+// 4. Retornar True si un numero es par sino devolver False
+const numero333 = 5
+const numero444 = 6
+
+console.log(numero333 % 2 === 0) // false
+console.log(numero444 % 2 === 0) // true
+
+// 5. Retornar True si un numero es impar sino devolver False
+const numero555 = 5
+const numero666 = 6
+
+console.log(numero555 % 2 !== 0) // true
+console.log(numero666 % 2 !== 0) // false
+
+// 6. calcular el area de un triangulo y mostrar su resultado si tenemos los valores base y altura
+const base = 10
+const altura = 5
+
+const area = (base * altura) / 2
+
+console.log(area) // 25
+
+// 7. (TODO) Almacenar en una constante un número de 3 cifras y mostrar la suma de sus cifras elevada al cubo.
+
+// 8. (TODO) Almacenar en una constante un monto de dinero, luego mostrar cuanto le toca a cada socio según la siguiente tabla:
+// SOCIO A = 30%, SOCIO B = 20%, SOCIO C = 60%
