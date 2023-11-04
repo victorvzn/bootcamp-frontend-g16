@@ -62,7 +62,18 @@ const miObjeto = {
   nombre: 'Victor',
   apellido: 'Villazón',
   colorFavorito: 'azúl',
-  'mi edad': 37
+  'mi edad': 37,
+  coloresFavoritos: ['rosado', 'rojo', 'azúl'],
+  cursos: [
+    {
+      nombre: 'Matemática',
+      nota: 18
+    },
+    {
+      nombre: 'Algoritmos',
+      nota: 20
+    }
+  ]
 }
 
 console.log(miObjeto)
@@ -73,4 +84,13 @@ console.log(miObjeto.nombre) // Victor
 console.log(miObjeto.apellido) // Villazón
 console.log(miObjeto.edad) // undefined
 
-console.log(miObjeto['mi edad'])
+// console.log(miObjeto.mi edad) // BAD ❌
+console.log(miObjeto['mi edad']) // OK ✅
+
+console.log(miObjeto.coloresFavoritos)
+console.log(miObjeto.coloresFavoritos[2])
+
+console.log(miObjeto.cursos)
+console.log(miObjeto.cursos[1])
+console.log(miObjeto.cursos[1].nombre)
+console.log(miObjeto.cursos[1]['nota'])
