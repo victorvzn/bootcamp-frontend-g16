@@ -94,3 +94,79 @@ console.log(miObjeto.cursos)
 console.log(miObjeto.cursos[1])
 console.log(miObjeto.cursos[1].nombre)
 console.log(miObjeto.cursos[1]['nota'])
+
+// ELIMINAR PROPIEDADES DE UN OBJETO
+
+console.log(miObjeto)
+delete miObjeto.colorFavorito
+console.log(miObjeto)
+
+// INSERTAR UN NUEVA PROPIEDAD A UN OBJETO
+
+miObjeto.platoFavorito = 'Ceviche de Conchas Negras'
+miObjeto['juegos favoritos'] = ['Crash Team Reacing', 'Mario', 'Minecraft']
+
+console.log(miObjeto)
+
+// DESTRUCTURING
+
+// Una forma de extraer las propiedades/elementos de un objeto o un arreglo en variable
+
+// DESTRUCTURING PARA OBJETOS
+
+const nombreValue = miObjeto.nombre
+const apellidoValue = miObjeto.apellido
+const cursosValue = miObjeto.cursos
+
+console.log(nombreValue, apellidoValue, cursosValue)
+
+const { nombre, apellido } = miObjeto
+
+console.log(nombre, apellido)
+
+const { nombre: nombreValor, apellido: apellidoValor } = miObjeto
+
+console.log(nombreValor, apellidoValor)
+
+// DESTRUCTURING PARA ARREGLOS
+
+const amigos = ['angel', 'carlos', 'claudia', 'franklin', 'samael']
+
+const [amigo1, amigo2] = amigos
+
+console.log(amigo1)
+console.log(amigo2)
+
+// SPREAD OPERATOR (operador ...)
+
+const producto = {
+  nombre: 'Laptop',
+  precio: 6800,
+  categoria: 'tech'
+}
+
+const cliente = {
+  nombre  : 'Claudia',
+  isVip: true
+}
+
+console.log(producto + cliente) // [object Object][object Object] ❌
+
+const nuevoObjeto = { ...producto, ...cliente }
+
+console.log(nuevoObjeto)
+
+// SPREAD OPERATOR SIN COLICIONES
+
+const nuevoObjetoSinColisiones = {
+  producto: { ...producto },
+  cliente: { ...cliente },
+}
+
+console.log(nuevoObjetoSinColisiones)
+
+// OTROS MÉTODOS DE OBJETOS
+
+console.log(Object.keys(producto)) // Obtenemos solo las clave(keys) del objeto
+console.log(Object.values(producto)) // Obtenemos solo los valores del objeto
+console.log(Object.entries(producto)) // Convertimos un objeto en arreglo
