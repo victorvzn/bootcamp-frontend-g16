@@ -50,6 +50,28 @@ console.log('splice', listaDeValores)
 console.log('bienvenido'.length)
 console.log(listaDeValores.length)
 
+// MÉTODOS DE ARREGLOS
+
+// Método INCLUDES, nos indica si el valor que se pasa como parametro se encuentra en el arreglo y devuelve un booleano
+
+const numeros = [1, 2, 3, 4, 5]
+
+console.log(numeros.includes(3)) // true
+console.log(numeros.includes(99)) // false
+
+// Método FILTER, nos ayuda a ubicar un elemento dentro de un arreglo usando una condición y devuelve un arreglo con los resultados
+
+const languages = ['javascript', 'php', 'python', 'C', 'c++', 'java', 'python']
+
+console.log(
+  languages.filter(
+    function(language) {
+      // return language === 'python' ['python', 'python']
+      // return language.includes('c') // ['javascript', 'c', 'c++']
+      return language.toLowerCase().includes('c') // ['javascript', 'c', 'c++']
+    }
+  )
+)
 
 // OBJETOS
 
