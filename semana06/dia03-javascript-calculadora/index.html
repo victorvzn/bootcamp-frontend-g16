@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora con Javascript</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <!-- border border-red-500  -->
+
+  <main class="w-80 bg-orange-100 my-0 mx-auto mt-5 p-5 rounded-md shadow-md">
+    <h1 class="text-3xl font-bold text-center mb-3">Calculadora</h1>
+
+    <section class="flex flex-col gap-3">
+      <input type="text" class="border p-1 text-right text-xl" readonly value="0">
+
+      <div class="grid grid-cols-3 gap-3">
+        <button class="bg-red-300 p-2 rounded-md duration-300 hover:bg-red-400">+</button>
+        <button class="bg-red-300 p-2 rounded-md duration-300 hover:bg-red-400">-</button>
+        <button class="bg-red-300 p-2 rounded-md duration-300 hover:bg-red-400">*</button>
+        
+        <button class="bg-blue-300 p-2 rounded-md duration-300 hover:bg-blue-400">7</button>
+        <button class="bg-blue-300 p-2 rounded-md duration-300 hover:bg-blue-400">8</button>
+        <button class="bg-blue-300 p-2 rounded-md duration-300 hover:bg-blue-400">9</button>
+
+        <button class="bg-blue-300 p-2 rounded-md duration-300 hover:bg-blue-400">4</button>
+        <button class="bg-blue-300 p-2 rounded-md duration-300 hover:bg-blue-400">5</button>
+        <button class="bg-blue-300 p-2 rounded-md duration-300 hover:bg-blue-400">6</button>
+        
+        <button class="bg-blue-300 p-2 rounded-md duration-300 hover:bg-blue-400">1</button>
+        <button class="bg-blue-300 p-2 rounded-md duration-300 hover:bg-blue-400">2</button>
+        <button class="bg-blue-300 p-2 rounded-md duration-300 hover:bg-blue-400">3</button>
+
+        <button class="bg-blue-300 p-2 rounded-md duration-300 hover:bg-blue-400">0</button>
+        <button class="bg-green-300 p-2 rounded-md duration-300 hover:bg-green-400">AC</button>
+        <button class="bg-green-300 p-2 rounded-md duration-300 hover:bg-green-400"> =</button>
+
+      </div>
+    </section>
+  </main>
+
+  <script src="./main.js"></script>
+</body>
+</html>
