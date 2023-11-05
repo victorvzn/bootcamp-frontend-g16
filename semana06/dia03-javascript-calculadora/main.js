@@ -25,13 +25,24 @@ buttons.forEach(function(button) {
     // console.log(buttonText)
 
     if('+-*'.includes(buttonText)) {
-      //
-    } else if (buttonText === '=') {
-      //
+      operador = buttonText
+      operando = Number(numeroActual)
+      numeroActual = '0'
+    } else if (buttonText.trim() === '=') {
+      // Aquí realizo las operaciones matemáticas en base al número actual y el operando
+      if(operador === '+') {
+        numeroActual = Number(operando) + Number(numeroActual)
+      } else  if (operador === '-') {
+        numeroActual = Number(operando) - Number(numeroActual)
+      } else if (operador === '*') {
+        numeroActual = Number(operando) * Number(numeroActual)
+      }
     } else if (buttonText === 'AC') {
-      //
+      numeroActual = '0'
+      operador = ''
+      operando = ''
     } else { // Se presionó algún número
-      numeroActual = numeroActual + Number(buttonText)
+      numeroActual = Number(numeroActual + buttonText)
     }
 
     inputDisplay.value = numeroActual
