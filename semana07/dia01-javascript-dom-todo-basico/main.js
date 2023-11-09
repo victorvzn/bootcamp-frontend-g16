@@ -30,6 +30,9 @@ taskAdd.addEventListener('click', function(event) {
   li.appendChild(span)
 
   // TODO: Añadir un botón al li con el texto 'Borrar' y al hacer click en el botón que se elimine la fila de la tarea
+  const button = document.createElement('button')
+  button.textContent = 'Borrar'
+  li.appendChild(button)
 
   taskList.appendChild(li)
 
@@ -45,6 +48,10 @@ taskList.addEventListener('click', function(event) {
 
   if (target.tagName === 'INPUT' && target.type === 'checkbox') {
     target.classList.toggle('completed')
+  }
+
+  if(target.tagName === 'BUTTON') {
+    target.parentElement.remove()
   }
 })
 
