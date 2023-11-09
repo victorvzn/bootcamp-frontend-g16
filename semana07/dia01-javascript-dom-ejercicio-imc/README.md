@@ -8,7 +8,7 @@
 ```
 IMC = peso / altura * altura
 
-* EL IMX es el peso(en kilos) entre la altura(en metros) al cuadrado.
+* EL IMC es el peso(en kilos) entre la altura(en metros) al cuadrado.
 ```
 
 **Condiciones del IMC:**
