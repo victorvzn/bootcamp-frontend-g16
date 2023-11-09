@@ -7,8 +7,23 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <h1 class="text-9xl font-bold text-orange-400">
-    Hello world!
-  </h1>
+  <div class="container mx-auto w-80 bg-yellow-300 p-5 flex flex-col items-center gap-5">
+    <div class="keycode bg-red-400 w-16 h-16 rounded-full flex justify-center items-center text-4xl text-white"></div>
+    <div class="character bg-red-300 w-16 h-16 flex justify-center items-center text-4xl text-white"></div>
+  </div>
+
+  <script>
+    const divkeyCode = document.querySelector('.keycode')
+    const divCharacter = document.querySelector('.character')
+
+    document.addEventListener('keydown', function(event) {
+      console.log('>', event)
+      console.log('>', event.key) // Letra presionada
+      console.log('>', event.keyCode) // Código ASCII
+      
+      divkeyCode.textContent = event.keyCode
+      divCharacter.textContent = event.key
+    })
+  </script>
 </body>
 </html>
