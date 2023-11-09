@@ -3,6 +3,7 @@
 const inputPeso = document.querySelector('#inputPeso')
 const inputAltura = document.querySelector('#inputAltura')
 const btnCalcular = document.querySelector('#btnCalcular')
+const divResultado = document.querySelector('#resultado')
 
 btnCalcular.addEventListener('click', function (event) {
   // console.log(event)
@@ -34,6 +35,9 @@ btnCalcular.addEventListener('click', function (event) {
   }
 
   console.log(resultado)
+
+  // divResultado.innerText = ' Tu indice de Masa Corporal es ' + resultado + '. Y es ' + indiceDeMasaCorporal
+  divResultado.textContent = ' Tu indice de Masa Corporal es ' + resultado + ' con ' + indiceDeMasaCorporal.toFixed(2)
 })
 
 
