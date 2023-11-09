@@ -37,7 +37,7 @@ btnCalcular.addEventListener('click', function (event) {
   console.log(resultado)
 
   // divResultado.innerText = ' Tu indice de Masa Corporal es ' + resultado + '. Y es ' + indiceDeMasaCorporal
-  divResultado.textContent = ' Tu indice de Masa Corporal es ' + resultado + ' con ' + indiceDeMasaCorporal.toFixed(2)
+  divResultado.textContent = 'Tu indice de Masa Corporal es ' + resultado + ' con ' + indiceDeMasaCorporal.toFixed(2)
 })
 
 
