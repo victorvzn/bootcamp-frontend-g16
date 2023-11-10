@@ -30,5 +30,26 @@ taskInput.addEventListener('keypress', function(event) {
     // console.log(tasks)
 
     taskInput.value = ''
+
+    renderTasks()
   }
 })
+
+function renderTasks() {
+  // console.log('Dibujando las tareas...')
+  let list = ''
+  tasks.forEach(function(task, index) {
+    // console.log(task, index)
+    // list = list + task.title
+    list = list + `
+      <li class="task__item">
+        <input type="checkbox" />
+        <span>${task.title}</span>
+        <button>Borrar</button>
+      </li>
+    `
+  })
+
+  // console.log(list)
+  taskList.innerHTML = list
+}
