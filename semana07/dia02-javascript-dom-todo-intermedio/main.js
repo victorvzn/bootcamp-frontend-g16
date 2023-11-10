@@ -1,6 +1,6 @@
 // console.log('Hola JS')
 
-const tasks = [] // Aquí almacenaremos las tareas
+let tasks = [] // Aquí almacenaremos las tareas
 
 const taskInput = document.querySelector('.task__input') // Es la representación de un input desde javascript
 const taskList = document.querySelector('.task__list')
@@ -48,6 +48,16 @@ function checkTask(event, currentIndex) {
   console.log(tasks)
 }
 
+function removeTask(event, currentIndex) {
+  console.log('Eliminando', currentIndex)
+  // event.target.parentElement.remove()
+
+  const newTasks = tasks.filter((task, index) => index !== currentIndex)
+  tasks = newTasks
+  console.log(newTasks)
+  renderTasks()
+}
+
 function renderTasks() {
   // console.log('Dibujando las tareas...')
   let list = ''
@@ -61,7 +71,7 @@ function renderTasks() {
           onchange="checkTask(event, ${index})"
         />
         <span>${task.title}</span>
-        <button>Borrar</button>
+        <button onclick="removeTask(event, ${index})">Borrar</button>
       </li>
     `
   })
