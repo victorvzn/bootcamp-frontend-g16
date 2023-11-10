@@ -35,6 +35,19 @@ taskInput.addEventListener('keypress', function(event) {
   }
 })
 
+function checkTask(event, currentIndex) {
+  console.log('La tarea seleccionada tiene el indice', currentIndex)
+  // TODO: Hacer que el todo se tache usando solo Javascript (10 minutos)
+  const checkboxSelected = event.target
+  const liParent = checkboxSelected.parentElement
+  liParent.classList.toggle('isChecked')
+
+  const taskSelected = tasks[currentIndex]
+  taskSelected.done = !taskSelected.done
+
+  console.log(tasks)
+}
+
 function renderTasks() {
   // console.log('Dibujando las tareas...')
   let list = ''
@@ -43,7 +56,10 @@ function renderTasks() {
     // list = list + task.title
     list = list + `
       <li class="task__item">
-        <input type="checkbox" />
+        <input
+          type="checkbox"
+          onchange="checkTask(event, ${index})"
+        />
         <span>${task.title}</span>
         <button>Borrar</button>
       </li>
