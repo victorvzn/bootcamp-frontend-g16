@@ -55,6 +55,7 @@ function removeTask(event, currentIndex) {
   const newTasks = tasks.filter((task, index) => index !== currentIndex)
   tasks = newTasks
   console.log(newTasks)
+  
   renderTasks()
 }
 
