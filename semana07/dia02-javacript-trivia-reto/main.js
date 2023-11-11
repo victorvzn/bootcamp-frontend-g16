@@ -94,6 +94,10 @@ function respondQuestion(event, questionSelected) {
   console.log(correctAnswersCounter)
 }
 
+function showResultPage(event) {
+  
+}
+
 function renderQuestions() {
   // console.log('Estoy renderizando las preguntas...')
   const currentQuestion = questions[currentQuestionIndex]
@@ -153,7 +157,8 @@ function renderQuestions() {
         <button
           type="button"
           id="showResultsButton"
-          class="hidden text-white border border-blue-300 bg-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 text-left mr-2 mb-2"
+          class="${(currentQuestionIndex === questions.length - 1) ? '' : 'hidden'} text-white border border-blue-300 bg-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 text-left mr-2 mb-2"
+          onclick="showResultPage(event)"
         >
           Mostrar resultados
         </button>
