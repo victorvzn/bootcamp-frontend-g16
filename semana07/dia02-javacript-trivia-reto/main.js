@@ -37,6 +37,17 @@ const questionsAndResults = document.getElementById('questions-and-results')
 let currentQuestionIndex = 0
 // console.log(questions[currentQuestionIndex])
 
+
+function prevQuestion(event) {
+  // TODO: Añadir el botón "Pregunta anterior" con su funcionalidad respectiva.
+  if (currentQuestionIndex <= 0) {
+    return
+  }
+
+  currentQuestionIndex = currentQuestionIndex - 1 // contador
+  renderQuestions()
+}
+
 function nextQuestion(event) {
   // TODO: Resolver el problema cuando no tenemos más preguntas para mostrar
   // if(currentQuestionIndex < 2){
@@ -51,6 +62,26 @@ function nextQuestion(event) {
   currentQuestionIndex = currentQuestionIndex + 1 // contador
   console.log(currentQuestionIndex)
   renderQuestions()
+}
+
+function respondQuestion(event, questionSelected) {
+  const currentQuestion = questions[currentQuestionIndex]
+
+  // console.log(questionSelected === currentQuestion.correctAnswer)
+
+  const answerButton = document.querySelectorAll('[data-answer]')
+
+  answerButton.forEach(button => {
+    // console.log(button.dataset.answer)
+    console.log(button.dataset.answer,currentQuestion.correctAnswer)
+    if (Number(button.dataset.answer) === currentQuestion.correctAnswer) {
+      button.className = 'text-white border border-green-600 bg-green-600 font-medium rounded-lg text-sm px-5 py-2.5 text-left mr-2 mb-2 w-full'
+    } else {
+      button.className = 'text-white border border-red-600 bg-red-600 font-medium rounded-lg text-sm px-5 py-2.5 text-left mr-2 mb-2 w-full'
+    }
+  })
+
+  // console.log(answerButton)
 }
 
 function renderQuestions() {
@@ -68,18 +99,24 @@ function renderQuestions() {
         <button
           type="button"
           class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-left mr-2 mb-2 w-full"
+          data-answer="0"
+          onclick="respondQuestion(event, 0)"
         >
           ${currentQuestion.answerList[0]}
         </button>
         <button
           type="button"
           class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-left mr-2 mb-2 w-full"
+          data-answer="1"
+          onclick="respondQuestion(event, 1)"
         >
           ${currentQuestion.answerList[1]}
         </button>
         <button
           type="button"
           class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-left mr-2 mb-2 w-full"
+          data-answer="2"
+          onclick="respondQuestion(event, 2)"
         >
           ${currentQuestion.answerList[2]}
         </button>
@@ -91,10 +128,18 @@ function renderQuestions() {
         <button
           type="button"
           class="text-gray-900 bg-white hover:bg-gray-100 border border-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+          onclick="prevQuestion(event)"
+        >
+          Anterior
+        </button>
+        <button
+          type="button"
+          class="text-gray-900 bg-white hover:bg-gray-100 border border-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
           onclick="nextQuestion(event)"
         >
-          Siguiente pregunta
+          Siguiente
         </button>
+        
         <button
           type="button"
           class="hidden text-white border border-blue-300 bg-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 text-left mr-2 mb-2"
