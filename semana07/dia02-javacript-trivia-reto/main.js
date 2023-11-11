@@ -41,7 +41,7 @@ let currentQuestionIndex = 0
 
 
 function prevQuestion(event) {
-  // TODO: Añadir el botón "Pregunta anterior" con su funcionalidad respectiva.
+  // DONE: Añadir el botón "Pregunta anterior" con su funcionalidad respectiva.
   if (currentQuestionIndex <= 0) {
     return
   }
@@ -51,7 +51,7 @@ function prevQuestion(event) {
 }
 
 function nextQuestion(event) {
-  // TODO: Resolver el problema cuando no tenemos más preguntas para mostrar
+  // DONE: Resolver el problema cuando no tenemos más preguntas para mostrar
   // if(currentQuestionIndex < 2){
   //   currentQuestionIndex = currentQuestionIndex + 1;
   //   renderQuestions();
@@ -94,8 +94,37 @@ function respondQuestion(event, questionSelected) {
   console.log(correctAnswersCounter)
 }
 
+function startAgain(event) {
+  correctAnswersCounter = 0
+  currentQuestionIndex = 0
+
+  renderQuestions()
+}
+
 function showResultPage(event) {
-  
+  // TODO: Terminar la pantalla de mostrar resultados con los datos respectivos para que sean dinámicos
+
+  questionsAndResults.innerHTML = `
+    <section class="flex flex-col px-4 py-6 text-center bg-green-600 border rounded-lg shadow">
+      <p class="text-4xl font-medium text-gray-900 mb-4 text-white">¡GANASTE! o ¡PERDISTE!</p>
+      
+      <p class="text-md font-medium text-gray-900 mb-4 text-white">Respondiste 2 de 3</p>
+
+      <p class="text-md font-medium text-gray-900 mb-4 text-white">Y este es tu puntaje: 20</p>
+
+      <img src="https://placehold.co/300x100" />
+
+      <div class="flex justify-end mt-10">
+        <button
+          type="button"
+          class="text-white border border-blue-300 bg-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 text-left mr-2 mb-2"
+          onclick="startAgain(event)"
+        >
+          Empezar de nuevo
+        </button>
+      </div>
+    </section>
+  `
 }
 
 function renderQuestions() {
