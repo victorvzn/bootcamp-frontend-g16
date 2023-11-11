@@ -59,8 +59,18 @@ function renderQuestions() {
       </div>
 
       <div class="flex justify-end">
-        <button type="button" class="text-gray-900 bg-white hover:bg-gray-100 border border-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">Siguiente pregunta</button>
-        <button type="button" class="text-white border border-blue-300 bg-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 text-left mr-2 mb-2">Mostrar resultados</button>
+        <button
+          type="button"
+          class="text-gray-900 bg-white hover:bg-gray-100 border border-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+        >
+          Siguiente pregunta
+        </button>
+        <button
+          type="button"
+          class="text-white border border-blue-300 bg-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 text-left mr-2 mb-2"
+        >
+          Mostrar resultados
+        </button>
       </div>
     </section>
   `
