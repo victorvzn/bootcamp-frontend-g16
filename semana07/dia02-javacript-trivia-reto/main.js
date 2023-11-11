@@ -2,22 +2,32 @@
 
 const questions = [
   {
-    id: 1,
+    id: 1111,
+    order: 1,
     question: '¿Cómo se llama el método en JS que se utiliza para imprimir mensajes en la consola?',
     correctAnswer: 1,
     answerList: ['print()', 'console.log()', 'display()']
   },
   {
-    id: 2,
+    id: 2222,
+    order: 2,
     question: '¿Cuál es el operador utilizado para comparar el valor y el tipo de dos variables en JS?',
     correctAnswer: 2,
     answerList: ['==', '=', '===']
   },
   {
-    id: 3,
+    id: 3333,
+    order: 3,
     question: '¿Cuál es la función en JS que se utiliza para redondear hacia abajo el valor de un número decimal?',
     correctAnswer: 0,
     answerList: ['floor()', 'ceil()', 'round()']
+  },
+  {
+    id: 4444,
+    order: 4,
+    question: 'Otra pregunta más',
+    correctAnswer: 0,
+    answerList: ['X', 'Y', 'Y']
   }
 ]
 
@@ -29,7 +39,14 @@ let currentQuestionIndex = 0
 
 function nextQuestion(event) {
   // TODO: Resolver el problema cuando no tenemos más preguntas para mostrar
-  
+  // if(currentQuestionIndex < 2){
+  //   currentQuestionIndex = currentQuestionIndex + 1;
+  //   renderQuestions();
+  // }
+
+  if (currentQuestionIndex >= questions.length - 1 ) {
+    return
+  }
 
   currentQuestionIndex = currentQuestionIndex + 1 // contador
   console.log(currentQuestionIndex)
@@ -42,7 +59,10 @@ function renderQuestions() {
 
   const question = `
     <section class="flex flex-col px-4 py-6 mb-3 border rounded-lg shadow">
-      <p class="text-md font-medium text-gray-900 mb-4">${currentQuestion.question}</p>
+      <p class="text-md font-medium text-gray-900 mb-4">
+        ${currentQuestion.order}. 
+        ${currentQuestion.question}
+      </p>
 
       <div class="flex flex-col items-start mb-10">
         <button
