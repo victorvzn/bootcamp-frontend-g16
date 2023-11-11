@@ -31,6 +31,8 @@ const questions = [
   }
 ]
 
+let correctAnswersCounter = 0 // Contador
+
 // const questionsAndResults = document.querySelector('#questions-and-results')
 const questionsAndResults = document.getElementById('questions-and-results')
 
@@ -60,7 +62,7 @@ function nextQuestion(event) {
   }
 
   currentQuestionIndex = currentQuestionIndex + 1 // contador
-  console.log(currentQuestionIndex)
+  // console.log(currentQuestionIndex)
   renderQuestions()
 }
 
@@ -69,11 +71,17 @@ function respondQuestion(event, questionSelected) {
 
   // console.log(questionSelected === currentQuestion.correctAnswer)
 
-  const answerButton = document.querySelectorAll('[data-answer]')
+  // Incrementar el numero de respuestas correctas
+  if (questionSelected === currentQuestion.correctAnswer) {
+    // correctAnswersCounter = correctAnswersCounter + 1
+    correctAnswersCounter++
+  }
 
+  const answerButton = document.querySelectorAll('[data-answer]')
+  // Esto es para mostrar las respuestas correctas e incorrectas con sus colores respectivos
   answerButton.forEach(button => {
     // console.log(button.dataset.answer)
-    console.log(button.dataset.answer,currentQuestion.correctAnswer)
+    // console.log(button.dataset.answer,currentQuestion.correctAnswer)
     if (Number(button.dataset.answer) === currentQuestion.correctAnswer) {
       button.className = 'text-white border border-green-600 bg-green-600 font-medium rounded-lg text-sm px-5 py-2.5 text-left mr-2 mb-2 w-full'
     } else {
@@ -82,6 +90,8 @@ function respondQuestion(event, questionSelected) {
   })
 
   // console.log(answerButton)
+
+  console.log(correctAnswersCounter)
 }
 
 function renderQuestions() {
@@ -127,7 +137,7 @@ function renderQuestions() {
       <div class="flex justify-end">
         <button
           type="button"
-          class="text-gray-900 bg-white hover:bg-gray-100 border border-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+          class="hidden text-gray-900 bg-white hover:bg-gray-100 border border-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
           onclick="prevQuestion(event)"
         >
           Anterior
@@ -142,6 +152,7 @@ function renderQuestions() {
         
         <button
           type="button"
+          id="showResultsButton"
           class="hidden text-white border border-blue-300 bg-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 text-left mr-2 mb-2"
         >
           Mostrar resultados
