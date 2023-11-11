@@ -21,6 +21,10 @@ const questions = [
   }
 ]
 
+const currentQuestionIndex = 0
+
+console.log(questions[currentQuestionIndex])
+
 // const questionsAndResults = document.querySelector('#questions-and-results')
 const questionsAndResults = document.getElementById('questions-and-results')
 
