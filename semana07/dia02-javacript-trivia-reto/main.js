@@ -24,8 +24,17 @@ const questions = [
 // const questionsAndResults = document.querySelector('#questions-and-results')
 const questionsAndResults = document.getElementById('questions-and-results')
 
-const currentQuestionIndex = 0
+let currentQuestionIndex = 0
 // console.log(questions[currentQuestionIndex])
+
+function nextQuestion(event) {
+  // TODO: Resolver el problema cuando no tenemos más preguntas para mostrar
+  
+
+  currentQuestionIndex = currentQuestionIndex + 1 // contador
+  console.log(currentQuestionIndex)
+  renderQuestions()
+}
 
 function renderQuestions() {
   // console.log('Estoy renderizando las preguntas...')
@@ -62,12 +71,13 @@ function renderQuestions() {
         <button
           type="button"
           class="text-gray-900 bg-white hover:bg-gray-100 border border-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+          onclick="nextQuestion(event)"
         >
           Siguiente pregunta
         </button>
         <button
           type="button"
-          class="text-white border border-blue-300 bg-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 text-left mr-2 mb-2"
+          class="hidden text-white border border-blue-300 bg-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 text-left mr-2 mb-2"
         >
           Mostrar resultados
         </button>
