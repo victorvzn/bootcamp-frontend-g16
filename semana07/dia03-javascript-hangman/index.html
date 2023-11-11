@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hangman Game</title>
+  <style>
+    .hangman__title {
+      text-align: center;
+    }
+    .hangman__maskedword {
+      text-align: center;
+      font-size: 3rem;
+    }
+    .hangman__buttons {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: .2rem;
+    }
+    .hangman__result {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 2rem;
+      color: green;
+      font-weight: bold;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1 class="hangman__title">Hangman Javascript</h1>
+
+    <p class="hangman__maskedword">_________</p>
+
+    <div class="hangman__buttons"></div>
+
+    <div class="hangman__result hidden">
+      You won!
+    </div>
+  </main>
+
+  <script src="./main.js"></script>
+</body>
+</html>
