@@ -5,13 +5,21 @@ console.log('Hola JS!')
 const url = 'https://jsonplaceholder.typicode.com/posts'
 
 const fetchPosts = async () => {
-  const response = await fetch(url) // Promise
+  try {
+    const response = await fetch(url) // Promise
 
-  const json = await response.json()
+    if (!response.ok) { // ok === STATUS CODE 200
+      throw new Error('ERROR HTTP:', response.status)
+    }
 
-  // Aquí podemos procesar o modificar el json entrante
+    const json = await response.json()
 
-  return json
+    // Aquí podemos procesar o modificar el json entrante
+
+    return json
+  } catch (error) {
+    console.log(error)
+  }
 }
 
 const renderPosts = (posts = []) => {
