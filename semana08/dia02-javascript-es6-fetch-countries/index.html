@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listado de paises con Javascript y el API fetch</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="app__header wrapper">
+    <h1>Listado de paises con Javascript y el API fetch</h1>
+  </header>
+
+  <section class="app__filters wrapper">
+    <input
+      type="search"
+      class="app__search"
+      placeholder="Search for a country..."
+    />
+
+    <select class="app__filter wrapper">
+      <option value="">Filter by Region</option>
+      <option value="africa">Africa</option>
+      <option value="americas">Americas</option>
+      <option value="asia">Asia</option>
+      <option value="europe">Europe</option>
+      <option value="oceania">Oceania</option>
+    </select>
+  </section>
+
+  <main class="app__list wrapper"></main>
+
+  <script src="./modules/main.js"></script>
+</body>
+</html>
