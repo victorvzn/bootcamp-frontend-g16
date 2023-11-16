@@ -45,3 +45,6 @@ fetchPosts()
     renderPosts(posts)
     console.log(posts)
   })
+  .catch(error => {
+    console.log(error)
+  })
