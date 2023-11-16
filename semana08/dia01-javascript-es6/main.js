@@ -96,3 +96,50 @@ const otroSaludoConParametrosPorDefecto = (nombre = 'Anónimo') => {
 
 console.log(otroSaludoConParametrosPorDefecto())
 console.log(otroSaludoConParametrosPorDefecto('Hiroito'))
+
+// PARÁMETROS REST (operador rest -> ...)
+
+const numeros = [4, 6]
+
+function miSuma(n1, n2) {
+  return n1 + n2
+}
+
+console.log(miSuma(...numeros))
+
+
+const listaDeNumeros = [6, 33, 998, 1, -66, 453]
+
+console.log(
+  Math.max(...listaDeNumeros),
+  Math.min(...listaDeNumeros),
+)
+
+// Spread operator (...) Sirve para expandir un arreglo, llamadas a funciones, incluso objetos
+
+const frutas = ['Manzanas', 'Naranjas', 'Plátanos', 'Sandías', 'Duraznos']
+
+const FrutasYVerduras = ['Papas', 'Cebollas', ...frutas]
+
+console.log(frutas)
+console.log(FrutasYVerduras)
+
+const persona = {
+  nombre: 'Victor',
+  apellido: 'Villazón',
+  edad: 37
+}
+
+const stack = {
+  javascript: 'Reactjs',
+  python: 'Django',
+  nodejs: 'Express.js'
+}
+
+const personaYSuStack = {
+  ...persona,
+  ...stack
+}
+
+console.log(personaYSuStack)
+
