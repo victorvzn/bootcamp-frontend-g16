@@ -10,7 +10,7 @@ function nombreDeLaFuncion() { // Estamos declarando la función
 
 nombreDeLaFuncion() // Está ejecutandose la función
 
-// Funcions con parámetros
+// Funciones con parámetros
 
 function suma(numero1, numero2) {
   console.log(numero1 + numero2)
@@ -18,7 +18,7 @@ function suma(numero1, numero2) {
 
 suma(4, 6)
 
-// Funciones sin parámetros con retorno de datos
+// Funciones con parámetros y con retorno de datos
 
 function multiplicacion(numero1, numero2) {
   return numero1 * numero2
@@ -38,5 +38,61 @@ const resultadoDeResta = resta(7, 4)
 
 console.log(resultadoDeResta)
 
+// Funciones con parámetros por defecto con retorno y en múltiples líneas
 
-// Arrow functions
+function calcularSiEsMayorDe18(edad = 1) {
+  if (edad > 18) {
+    return 'Es mayor de edad'
+  } else {
+    return 'Es menor de edad'
+  }
+}
+
+console.log(calcularSiEsMayorDe18())
+console.log(calcularSiEsMayorDe18(25))
+
+
+// ARROW FUNCTIONS (Funciones flecha) = >
+
+// function nombreDeLaFuncion() { // Estamos declarando la función
+//   console.log('Hola a todos!')
+// }
+
+// Funciones sin parámetros en una línea
+
+const imprimiendoSaludo = () => console.log('Hola a todos nuevamanente!')
+
+imprimiendoSaludo()
+
+// Funciones con parámetros en una línea
+
+const otraSuma = (numero1, numero2) => console.log(numero1 + numero2)
+
+otraSuma(4, 9)
+
+// Funciones con parámetros y con retorno de datos en una línea
+
+const otraMultiplicación = (numero1, numero2) => numero1 * numero2
+
+console.log(otraMultiplicación(4, 4))
+
+// Funciones con parámetros con retorno y en múltiples líneas
+
+const saludoEnMayusculas = (nombre) => {
+  const nombreEnMayusculas = nombre.toUpperCase()
+
+  return 'Hola ' + nombreEnMayusculas + '!'
+}
+
+console.log(saludoEnMayusculas('Jose'))
+
+// Funciones con parámetros por defecto con retorno y en múltiples líneas
+
+const otroSaludoConParametrosPorDefecto = (nombre = 'Anónimo') => {
+  const nombreEnMayusculas = nombre.toUpperCase()
+
+  return 'Que tal ' + nombreEnMayusculas + '!'
+}
+
+console.log(otroSaludoConParametrosPorDefecto())
+console.log(otroSaludoConParametrosPorDefecto('Hiroito'))
