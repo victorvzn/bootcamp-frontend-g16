@@ -1,6 +1,6 @@
 // console.log('Hola JS!')
 
-const url = 'https://restcountries.com/v3.1/all?fields=name,flags,capital,population,languages,currencies,timezones'
+const url = 'https://restcountries.com/v3.1/all?fields=name,flags,region,capital,population,languages,currencies,timezones'
 
 // function fetchCountries() {
 //   return fetch(url) // Promise
@@ -27,7 +27,7 @@ const fetchCountries = async () => {
 }
 
 const renderCountries = (countries = []) => {
-  // console.log(countries)
+  console.log(countries)
 
   const countryListElement = document.querySelector('.app__list')
 
@@ -36,7 +36,21 @@ const renderCountries = (countries = []) => {
   countries.forEach(country => {
     // console.log(country)
     countryList += `
-      <h1>${country.name.common}</h1>
+      <div class="country">
+        <img class="country__flag" src="${country.flags.png}" alt="${country.flags.alt}" />
+        <div class="country__wrapper">
+          <h2 class="country__title">${country.name.common}</h2>
+          <div class="country__description">
+            <strong>Population:</strong> ${country.population}
+          </div>
+          <div class="country__description">
+            <strong>Region:</strong> ${country.region}
+          </div>
+          <div class="country__description">
+            <strong>Capital:</strong> ${country.capital[0]}
+          </div>
+        </div>
+      </div>
     `
   })
 
