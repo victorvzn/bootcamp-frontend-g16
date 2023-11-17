@@ -53,3 +53,35 @@ h1 {
   background-color: transparent;
   cursor: pointer;
 }
+
+.app__filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.app__search {
+  /* border: 1px solid red; */
+  width: 20rem;
+  display: flex;
+  padding: 0 1rem;
+  padding-right: 0;
+  gap: 1rem;
+
+  box-shadow: 0 0 3px hsl(0, 0%, 52%);
+}
+
+.app__search input {
+  /* border: 1px solid blue; */
+
+  border: none;
+  padding: .7rem 0;
+  padding-right: .7rem;
+  width: 100%;
+  outline: none;
+}
+
+.app__filter {
+  width: 10rem;
+}
