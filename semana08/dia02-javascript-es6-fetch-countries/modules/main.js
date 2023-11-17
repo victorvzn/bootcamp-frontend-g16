@@ -26,8 +26,25 @@ const fetchCountries = async () => {
   }
 }
 
+const renderCountries = (countries = []) => {
+  // console.log(countries)
+
+  const countryListElement = document.querySelector('.app__list')
+
+  let countryList = ''
+
+  countries.forEach(country => {
+    // console.log(country)
+    countryList += `
+      <h1>${country.name.common}</h1>
+    `
+  })
+
+  countryListElement.innerHTML = countryList
+}
+
 fetchCountries()
-  .then(data => console.log(data))
+  .then(data => renderCountries(data))
 
 
 
