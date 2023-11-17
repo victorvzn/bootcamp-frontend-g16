@@ -24,12 +24,32 @@ h1 {
 }
 
 .wrapper {
-  border: 1px solid red;
-
   width: min(100% - 3rem, 1440px);
   margin: 0 auto;
 }
 
+.hidden {
+  display: none;
+}
+
 .app__header {
-  
+  /* border: 1px solid red; */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.app__header--shadow {
+  box-shadow: 0 0 8px hsl(0, 0%, 52%);
+}
+
+.app__mode {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }

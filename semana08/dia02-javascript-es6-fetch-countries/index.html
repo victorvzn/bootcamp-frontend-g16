@@ -7,12 +7,18 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <header class="app__header wrapper">
-    <h1>Listado de paises con Javascript y el API fetch</h1>
-    <img src="./images/icon-moon.svg" alt="Dark mode" />
+  <header class="app__header--shadow">
+    <div class="app__header wrapper">
+      <h1>Listado de paises con Javascript y el API fetch</h1>
+      
+      <button class="app__mode">
+        <img src="./images/icon-moon.svg" alt="Dark mode" />
+        Dark mode
+      </button>
+    </div>
   </header>
 
-  <section class="app__filters wrapper">
+  <section class="app__filters wrapper hidden">
     <input
       type="search"
       class="app__search"
@@ -29,7 +35,7 @@
     </select>
   </section>
 
-  <main class="app__list wrapper"></main>
+  <main class="app__list wrapper hidden"></main>
 
   <script src="./modules/main.js"></script>
 </body>
