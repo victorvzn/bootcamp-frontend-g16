@@ -13,11 +13,27 @@ const filterSelect = document.querySelector('.app__filter')
 //     .catch(error => console.log(error))
 // }
 
+// const numeros = [4, 5, 6, 19, 99, -5]
+// const numerosFiltrados = numeros.filter(numero => {
+//   return numero > 10
+// })
+// console.log(numerosFiltrados) // [19, 99]
+
 searchInput.addEventListener('input', (event) => {
   // const value = searchInput.value
   const value = event.target.value
+  const loweredValue = value.toLowerCase()
 
   // console.log(value)
+  const filteredCountries = countryData.filter(
+    country => {
+      const loweredName = country.name.common.toLowerCase()
+
+      return loweredName.includes(loweredValue) // true o false
+    }
+  )
+
+  renderCountries(filteredCountries)
 })
 
 // TODO: Reescribir la función fetchCountries usando async/await para luego del receso.
