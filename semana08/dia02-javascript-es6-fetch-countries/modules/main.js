@@ -82,11 +82,20 @@ const renderResults = (countriesFiltered) => {
 }
 
 const renderCountries = (countries = []) => {
-  console.log(countries)
+  // console.log(countries)
 
   const countryListElement = document.querySelector('.app__list')
 
   let countryList = ''
+
+  if (countries.length === 0) {
+    countryListElement.classList.add('app__list--no-found')
+    countryListElement.innerHTML = `
+      <img src="./images/icon-sad-square.svg" width="100" height="100" />
+      <p>Sorry, no results found!</p>
+    `
+    return
+  }
 
   countries.forEach(country => {
     // console.log(country)

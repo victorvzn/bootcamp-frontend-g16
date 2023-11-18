@@ -103,6 +103,21 @@ h1 {
   justify-items: center;
 }
 
+.app__list--no-found {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* justify-items: center; */
+  /* align-items: center; */
+  place-items: center;
+  gap: .5rem;
+
+  background-color: #f1f1f1;
+  padding: 20vh 0;
+  
+  font-weight: 300;
+  font-size: 2rem;
+}
+
 /*
   576px -> pantallas pequeñas (celulares)
   768px -> pantallas pequeñas (tablets y ceulares)
