@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listado de paises con Javascript y el API fetch</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="app__header--shadow">
+    <div class="app__header wrapper">
+      <h1>Listado de paises con Javascript y el API fetch</h1>
+      
+      <button class="app__mode">
+        <img src="./images/icon-moon.svg" alt="Dark mode" />
+        Dark mode
+      </button>
+    </div>
+  </header>
+
+  <section class="app__filters wrapper">
+    <div class="app__search">
+      <img src="./images/icon-search.svg" alt="Search icon" />
+      <input
+        class="app__input"
+        type="search"
+        placeholder="Search for a country..."
+      />
+    </div>
+
+    <div class="app__results"></div>
+
+    <select class="app__filter">
+      <option value="">Filter by Region</option>
+      <option value="africa">Africa</option>
+      <option value="americas">Americas</option>
+      <option value="asia">Asia</option>
+      <option value="europe">Europe</option>
+      <option value="oceania">Oceania</option>
+    </select>
+  </section>
+
+  <main class="app__list wrapper"></main>
+
+  <script src="./modules/main.js" type="module"></script>
+</body>
+</html>

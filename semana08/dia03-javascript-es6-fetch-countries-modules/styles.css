@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,600;6..12,800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: hsl(0, 0%, 98%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.wrapper {
+  width: min(100% - 3rem, 1440px);
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.app__header {
+  /* border: 1px solid red; */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+
+.app__header--shadow {
+  box-shadow: 0 0 8px hsl(0, 0%, 52%);
+}
+
+.app__mode {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.app__filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.app__search {
+  /* border: 1px solid red; */
+  width: 20rem;
+  display: flex;
+  padding: 0 1rem;
+  padding-right: 0;
+  gap: 1rem;
+
+  box-shadow: 0px 0px 5px 2px hsla(0, 0%, 0%, 0.1);
+}
+
+.app__search input {
+  /* border: 1px solid blue; */
+
+  border: none;
+  padding: .8rem 0;
+  padding-right: .7rem;
+  width: 100%;
+  outline: none;
+}
+
+.app__filter {
+  width: 10rem;
+
+  padding: .8rem;
+  border: none;
+
+  box-shadow: 0px 0px 5px 2px hsla(0, 0%, 0%, 0.1);
+}
+
+.app__list {
+  /* border: 1px solid red; */
+
+  display: grid;
+  grid-template-columns: repeat(1, fr);
+  gap: 3rem;
+
+  justify-items: center;
+}
+
+.app__list--no-found {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* justify-items: center; */
+  /* align-items: center; */
+  place-items: center;
+  gap: .5rem;
+
+  background-color: #f1f1f1;
+  padding: 20vh 0;
+  
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+/*
+  576px -> pantallas pequeñas (celulares)
+  768px -> pantallas pequeñas (tablets y ceulares)
+  992px -> pantallas medianas (Desktop)
+  1200px -> pantallas grandes (Desktops, TVs)
+*/
+
+@media screen and (min-width: 768px) {
+  /* Esta media query es para tablets */
+  .app__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  /* Esta media query es para Desktops hacia arriba */
+  .app__list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.country {
+  border-radius: .5rem;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 1px 1px 3px #f1f1f1;
+  overflow: hidden;
+}
+
+.country__flag {
+  aspect-ratio: 3/2;
+  object-fit: contain;
+  width: 100%;
+}
+
+.country__wrapper {
+  padding: 1.5rem;
+}
+
+.country__title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.country__description {
+  font-size: .9rem;
+  margin-bottom: .5rem;
+}
