@@ -6,6 +6,7 @@ let countryData = []
 
 const searchInput = document.querySelector('.app__input')
 const filterSelect = document.querySelector('.app__filter')
+const resultsDiv = document.querySelector('.app__results')
 
 // function fetchCountries() {
 //   return fetch(url) // Promise
@@ -37,6 +38,7 @@ searchInput.addEventListener('input', (event) => {
   )
 
   renderCountries(filteredCountries)
+  renderResults(filteredCountries)
 })
 
 filterSelect.addEventListener('input', (event) => {
@@ -52,6 +54,7 @@ filterSelect.addEventListener('input', (event) => {
   )
 
   renderCountries(filteredCountriesByRegion)
+  renderResults(filteredCountriesByRegion)
 })
 
 // TODO: Reescribir la función fetchCountries usando async/await para luego del receso.
@@ -70,6 +73,12 @@ const fetchCountries = async () => {
   } catch(error) {
     console.log(error)
   }
+}
+
+const renderResults = (countriesFiltered) => {
+  const total = countriesFiltered.length
+
+  resultsDiv.textContent = `${total} Countries Filtered`
 }
 
 const renderCountries = (countries = []) => {
