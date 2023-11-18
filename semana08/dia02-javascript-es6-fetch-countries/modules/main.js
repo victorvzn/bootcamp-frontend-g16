@@ -39,6 +39,21 @@ searchInput.addEventListener('input', (event) => {
   renderCountries(filteredCountries)
 })
 
+filterSelect.addEventListener('input', (event) => {
+  const value = event.target.value
+  const loweredValue = value.toLowerCase()
+
+  const filteredCountriesByRegion = countryData.filter(
+    country => {
+      const loweredRegion = country.region.toLowerCase()
+      
+      return loweredRegion.includes(loweredValue)
+    }
+  )
+
+  renderCountries(filteredCountriesByRegion)
+})
+
 // TODO: Reescribir la función fetchCountries usando async/await para luego del receso.
 
 const fetchCountries = async () => {
