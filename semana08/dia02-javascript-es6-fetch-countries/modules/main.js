@@ -23,15 +23,16 @@ searchInput.addEventListener('input', (event) => {
   // const value = searchInput.value
   const value = event.target.value
   const loweredValue = value.toLowerCase()
-
-  // console.log(value)
+  
   const filteredCountries = countryData.filter(
     country => {
       const loweredName = country.name.common.toLowerCase()
 
       // TODO: Adicionalmente necesitamos filtrar los paises por su capital
+      const joinedCapitals = country.capital.join(',') // Une todos los elementos de un arreglo en una cadena de texto
+      const loweredCapitals = joinedCapitals.toLowerCase()
 
-      return loweredName.includes(loweredValue) // true o false
+      return loweredName.includes(loweredValue) || loweredCapitals.includes(loweredValue)
     }
   )
 
