@@ -29,6 +29,8 @@ searchInput.addEventListener('input', (event) => {
     country => {
       const loweredName = country.name.common.toLowerCase()
 
+      // TODO: Adicionalmente necesitamos filtrar los paises por su capital
+
       return loweredName.includes(loweredValue) // true o false
     }
   )
