@@ -2,6 +2,8 @@
 
 const url = 'https://restcountries.com/v3.1/all?fields=name,flags,region,capital,population,languages,currencies,timezones'
 
+let countryData = []
+
 const searchInput = document.querySelector('.app__input')
 const filterSelect = document.querySelector('.app__filter')
 
@@ -15,7 +17,7 @@ searchInput.addEventListener('input', (event) => {
   // const value = searchInput.value
   const value = event.target.value
 
-  console.log(value)
+  // console.log(value)
 })
 
 // TODO: Reescribir la función fetchCountries usando async/await para luego del receso.
@@ -76,6 +78,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   //   .then(data => renderCountries(data))
 
   const data = await fetchCountries()
+
+  countryData = data
 
   renderCountries(data)
 })
