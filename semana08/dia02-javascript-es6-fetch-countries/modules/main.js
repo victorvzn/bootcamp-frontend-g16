@@ -97,6 +97,8 @@ const renderCountries = (countries = []) => {
     return
   }
 
+  countryListElement.classList.remove('app__list--no-found')
+
   countries.forEach(country => {
     // console.log(country)
     countryList += `
