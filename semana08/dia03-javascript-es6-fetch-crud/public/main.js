@@ -7,7 +7,22 @@ const fetchPeliculas = async () => {
 
   const data = await reponse.json()
 
-  console.log(data)
+  return data
 }
 
-fetchPeliculas()
+
+document.addEventListener('DOMContentLoaded', async (event) => {
+  // Ejemplo usando promesas
+
+  // fetchPeliculas()
+  //   .then(peliculas => {
+  //     console.log(peliculas)
+  //     // renderPeliculas(peliculas)
+  //   })
+
+  // Ejemplo usando async/await
+
+  const peliculas = await fetchPeliculas()
+
+  console.log(peliculas)
+})
