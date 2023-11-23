@@ -26,7 +26,12 @@ export const renderPeliculas = (peliculas) => {
             <strong>Resumen:</strong> ${pelicula.resumen}
           </div>
         </td>
-        <td>***</td>
+        <td>
+          <div class="flex gap-0.5">
+            <button class="pelicula__edit">✏</button>
+            <button class="pelicula__remove">❌</button>
+          </div>
+        </td>
       </tr>
     `
   })
