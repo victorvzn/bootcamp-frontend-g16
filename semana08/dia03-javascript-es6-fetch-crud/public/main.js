@@ -1,10 +1,10 @@
 // console.log('Hola modulos de Javascript!')
 import { renderPeliculas } from "./peliculas.js"
-import { fetchPeliculas } from "./services.js"
+import { fetchPeliculas, createPelicula } from "./services.js"
 
 const peliculasForm = document.getElementById('peliculasForm')
 
-peliculasForm.addEventListener('submit', (event) => {
+peliculasForm.addEventListener('submit', async (event) => {
   event.preventDefault()
 
   // console.log('Creando una nueva película...')
@@ -16,20 +16,24 @@ peliculasForm.addEventListener('submit', (event) => {
   const nombre = peliculaForm.nombre.value
   const imagen = peliculaForm.imagen.value
   const estreno = peliculaForm.estreno.value
-  const generoId = peliculaForm.genero.value
+  const genero = peliculaForm.genero.value // Este campo es del tipo cadena por defecto
   const resumen = peliculaForm.resumen.value
 
-  console.log({ nombre, imagen, estreno, generoId, resumen })
+  console.log({ nombre, imagen, estreno, genero, resumen })
 
   const nuevaPelicula = {
     nombre,
     imagen,
     estreno,
-    generoId: Number(generoId),
+    generoId: Number(genero),
     resumen
   }
 
   console.log(nuevaPelicula)
+
+  const response = await createPelicula(nuevaPelicula)
+
+  console.log(response)
 })
 
 document.addEventListener('DOMContentLoaded', async (event) => {

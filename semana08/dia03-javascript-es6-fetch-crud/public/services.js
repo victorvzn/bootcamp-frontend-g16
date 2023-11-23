@@ -7,3 +7,23 @@ export const fetchPeliculas = async () => {
 
   return data
 }
+
+export const createPelicula = async (form) => {
+  const url = 'http://localhost:3000/peliculas'
+
+  const body = JSON.stringify(form)
+
+  const options = {
+    method: 'POST', // Nos permite crear un nuvo registro
+    headers: {
+      'Content-type': 'application/json' // MIMETYPES
+    },
+    body
+  }
+
+  const response = await fetch(url, options)
+
+  const data = await response.json()
+
+  return data
+}

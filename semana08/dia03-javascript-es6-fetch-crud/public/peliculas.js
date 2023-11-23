@@ -10,6 +10,7 @@ export const renderPeliculas = (peliculas) => {
         <td>
           <img
             src="${pelicula.imagen}"
+            onerror="this.src='https://placehold.co/300x450'"
             width="100"
             height="250"
           />

@@ -103,6 +103,78 @@
       "estreno": "2023-04-05",
       "generoId": 3,
       "resumen": "Resumen de prueba"
+    },
+    {
+      "nombre": "Mi pelicula",
+      "imagen": "una imagen",
+      "estreno": "2023-11-22",
+      "generoId": 2,
+      "resumen": "un resumen",
+      "id": 10
+    },
+    {
+      "nombre": "otra peli",
+      "imagen": "otra imagen",
+      "estreno": "2023-11-22",
+      "generoId": 4,
+      "resumen": "otro resumen",
+      "id": 11
+    },
+    {
+      "nombre": "otra peli",
+      "imagen": "otra imagen",
+      "estreno": "2023-11-22",
+      "generoId": 4,
+      "resumen": "otro resumen",
+      "id": 12
+    },
+    {
+      "nombre": "otra peli",
+      "imagen": "otra imagen",
+      "estreno": "2023-11-22",
+      "generoId": 4,
+      "resumen": "otro resumen",
+      "id": 13
+    },
+    {
+      "nombre": "a",
+      "imagen": "a",
+      "estreno": "2023-11-22",
+      "generoId": 2,
+      "resumen": "123",
+      "id": 14
+    },
+    {
+      "nombre": "a",
+      "imagen": "a",
+      "estreno": "2023-11-22",
+      "generoId": 2,
+      "resumen": "123",
+      "id": 15
+    },
+    {
+      "nombre": "a",
+      "imagen": "a",
+      "estreno": "2023-11-22",
+      "generoId": 2,
+      "resumen": "123",
+      "id": 16
+    },
+    {
+      "nombre": "a",
+      "imagen": "a",
+      "estreno": "2023-11-22",
+      "generoId": 2,
+      "resumen": "123",
+      "id": 17
+    },
+    {
+      "nombre": "a",
+      "imagen": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/gPbM0MK8CP8A174rmUwGsADNYKD.jpg",
+      "estreno": "2023-11-22",
+      "generoId": 2,
+      "resumen": "123",
+      "id": 18
     }
   ]
 }
