@@ -45,9 +45,29 @@
         </table>
       </div>
       <div>
-        
+        <form>
+          <h2>Nueva película</h2>
+
+          <input type="text" name="nombre" placeholder="Nombre" required />
+          <input type="text" name="imagen" placeholder="Imagen" required />
+          <input type="date" name="estreno" placeholder="Estreno" required />
+          <select name="genero" required>
+            <option value="">Selecciona un genero</option>
+            <option value="1">Comedia</option>
+            <option value="2">Acción</option>
+            <option value="3">Animación</option>
+            <option value="4">Aventura</option>
+          </select>
+          <textarea name="resumen" placeholder="Resumen"></textarea>
+
+          <input type="submit" value="Guardar" />
+        </form>
       </div>
     </div>
   </div>
+
+  <footer class="container-fluid">
+    Victor Villazón - Noviembre 2023
+  </footer>
 </body>
 </html>
