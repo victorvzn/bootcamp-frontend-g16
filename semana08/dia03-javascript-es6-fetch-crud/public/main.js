@@ -1,4 +1,5 @@
 // console.log('Hola modulos de Javascript!')
+import { renderPeliculas } from "./peliculas.js"
 import { fetchPeliculas } from "./services.js"
 
 document.addEventListener('DOMContentLoaded', async (event) => {
@@ -15,4 +16,6 @@ document.addEventListener('DOMContentLoaded', async (event) => {
   const peliculas = await fetchPeliculas()
 
   console.log(peliculas)
+
+  renderPeliculas(peliculas)
 })
