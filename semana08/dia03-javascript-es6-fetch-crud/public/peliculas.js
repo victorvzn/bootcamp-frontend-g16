@@ -20,7 +20,7 @@ export const renderPeliculas = (peliculas) => {
             <strong>Estreno:</strong> ${pelicula.estreno}
           </div>
           <div class="fs-small">
-            <strong>Genero:</strong> ${pelicula.generoId}
+            <strong>Genero:</strong> ${pelicula.genero.nombre}
           </div>
           <div class="fs-small">
             <strong>Resumen:</strong> ${pelicula.resumen}
