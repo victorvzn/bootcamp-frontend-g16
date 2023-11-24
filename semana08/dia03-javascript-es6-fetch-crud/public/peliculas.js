@@ -1,5 +1,7 @@
 import { fetchPeliculas, deletePelicula } from "./services.js"
 
+// TODO: Terminar la edición de películas usando el método PUT
+
 export const renderPeliculas = (peliculas) => {
   const peliculasList = document.querySelector('.peliculas__list')
 
