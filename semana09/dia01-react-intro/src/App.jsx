@@ -90,7 +90,7 @@
 import Saludo from "./components/Saludo.jsx"
 import Despedida from "./components/Despedida.jsx"
 
-import { LISTA_DE_FRUTAS, EDAD } from './components/frutas.js'
+import {  LISTA_DE_FRUTAS, EDAD } from './components/frutas.js'
 
 import './demo.css' // Importando css global
 
