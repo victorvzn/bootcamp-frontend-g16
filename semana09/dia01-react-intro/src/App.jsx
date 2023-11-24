@@ -63,6 +63,8 @@
 import Saludo from "./components/Saludo.jsx"
 import Despedida from "./components/Despedida.jsx"
 
+import { LISTA_DE_FRUTAS, EDAD } from './components/frutas.js'
+
 const App = () => {
   return (
     <>
@@ -72,6 +74,12 @@ const App = () => {
 
       <Saludo />
       <Despedida />
+
+      {1+2}
+
+      {LISTA_DE_FRUTAS}
+
+      {EDAD}
     </>
   )
 }
