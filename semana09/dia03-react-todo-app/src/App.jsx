@@ -20,11 +20,14 @@ const App = () => {
   ]
 
   const [todos, setTodos] = useState(DEFAULT_TODOS)
+  const [input, setInput] = useState('')
 
   const handleChange = (event) => {
     // Estamos capturando lo que escribimos en la caja de texto
+    // console.log(event.target.value)
+    const value = event.target.value
 
-    console.log(event.target.value)
+    setInput(value)
   }
 
   return (
@@ -34,6 +37,8 @@ const App = () => {
       <h1 className="text-2xl font-bold">TODO APP</h1>
 
       {/* {JSON.stringify(todos)} */}
+
+      {input}
 
       <form>
         <input
