@@ -74,6 +74,12 @@ const App = () => {
     setTodos(newTodos)
   }
 
+  const completedTodos = () => {
+    const completedTodos = todos.filter(todo => todo.completed === true)
+
+    return completedTodos.length
+  }
+
   return (
     <main
       className="bg-yellow-100 w-full max-w-sm mx-auto mt-10 border border-yellow-600 rounded-lg shadow-lg p-4"
@@ -99,7 +105,9 @@ const App = () => {
 
       {todos.length > 0 && (
         <div className="flex justify-between items-center">
-          <span className="font-bold">3 de 8</span>
+          <span className="font-bold">
+            {completedTodos()} de {todos.length}
+          </span>
           <button
             className="bg-blue-500 rounded-lg px-2 py-1 text-white hover:bg-blue-700 duration-300"
           >
