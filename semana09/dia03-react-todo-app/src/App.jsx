@@ -33,7 +33,17 @@ const App = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     
-    console.log('Estoy enviando el formulario...')
+    // console.log('Estoy enviando el formulario...')
+
+    const newTodo = {
+      id: 4,
+      title: input,
+      completed: false
+    }
+
+    setTodos([...todos, newTodo])
+
+    setInput('')
   }
 
   return (
@@ -53,6 +63,7 @@ const App = () => {
           placeholder="¿Qué deseas hacer hoy?"
           required
           onChange={handleChange}
+          value={input}
         />
       </form>
 
