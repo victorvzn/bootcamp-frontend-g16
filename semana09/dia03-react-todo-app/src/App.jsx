@@ -46,6 +46,16 @@ const App = () => {
     setInput('')
   }
 
+  const handleRemoveTodo = (event) => {
+    const idSelected = event.target.dataset.id
+
+    const newTodos = todos.filter(todo => todo.id !== idSelected)
+
+    setTodos(newTodos)
+
+    // console.log('Eliminando tarea...', idSelected)
+  }
+
   return (
     <main
       className="bg-yellow-100 w-full max-w-sm mx-auto mt-10 border border-yellow-600 rounded-lg shadow-lg p-4"
@@ -70,7 +80,7 @@ const App = () => {
       {/* {todos.length === 0 && 'No hay tareas'} */}
 
       {todos.length > 0 && (
-        <div className="flex justify-between">
+        <div className="flex justify-between items-center">
           <span className="font-bold">3 de 8</span>
           <button
             className="bg-blue-500 rounded-lg px-2 py-1 text-white hover:bg-blue-700 duration-300"
@@ -96,6 +106,8 @@ const App = () => {
                   </div>
                   <button
                     className="bg-red-300 rounded-lg px-2 py-2"
+                    data-id={todo.id}
+                    onClick={handleRemoveTodo}
                   >
                     ❌
                   </button>
