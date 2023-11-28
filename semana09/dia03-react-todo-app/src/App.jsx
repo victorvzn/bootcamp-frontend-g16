@@ -30,6 +30,12 @@ const App = () => {
     setInput(value)
   }
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    
+    console.log('Estoy enviando el formulario...')
+  }
+
   return (
     <main
       className="bg-yellow-100 w-full max-w-sm mx-auto mt-10 border border-yellow-600 rounded-lg shadow-lg p-4"
@@ -38,9 +44,9 @@ const App = () => {
 
       {/* {JSON.stringify(todos)} */}
 
-      {input}
+      {/* {input} */}
 
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           className="w-full border my-3 p-3"
           type="text"
