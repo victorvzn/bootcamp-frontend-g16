@@ -76,8 +76,14 @@ const App = () => {
 
   const completedTodos = () => {
     const completedTodos = todos.filter(todo => todo.completed === true)
-
+    
     return completedTodos.length
+  }
+  
+  const handleClearTodos = () => {
+    const incompletedTodos = todos.filter(todo => todo.completed === false)
+
+    setTodos(incompletedTodos)
   }
 
   return (
@@ -110,6 +116,7 @@ const App = () => {
           </span>
           <button
             className="bg-blue-500 rounded-lg px-2 py-1 text-white hover:bg-blue-700 duration-300"
+            onClick={handleClearTodos}
           >
             Limpiar tareas completadas
           </button>
