@@ -19,7 +19,7 @@ const App = () => {
   //   },
   // ]
 
-  const [todos, setTodos] = useState([])
+  const [todos, setTodos] = useState(JSON.parse(localStorage.getItem('todos')) || [])
   const [input, setInput] = useState('')
 
   const handleChange = (event) => {
@@ -41,7 +41,11 @@ const App = () => {
       completed: false
     }
 
-    setTodos([...todos, newTodo])
+    const updatedTodos = [...todos, newTodo]
+
+    setTodos(updatedTodos)
+
+    localStorage.setItem('todos', JSON.stringify(updatedTodos))
 
     setInput('')
   }
@@ -52,6 +56,8 @@ const App = () => {
     const newTodos = todos.filter(todo => todo.id !== idSelected)
 
     setTodos(newTodos)
+
+    localStorage.setItem('todos', JSON.stringify(newTodos))
 
     // console.log('Eliminando tarea...', idSelected)
   }
@@ -72,6 +78,8 @@ const App = () => {
     // console.log(newTodos)
 
     setTodos(newTodos)
+
+    localStorage.setItem('todos', JSON.stringify(newTodos))
   }
 
   const completedTodos = () => {
