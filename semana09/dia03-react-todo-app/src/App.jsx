@@ -21,6 +21,12 @@ const App = () => {
 
   const [todos, setTodos] = useState(DEFAULT_TODOS)
 
+  const handleChange = (event) => {
+    // Estamos capturando lo que escribimos en la caja de texto
+
+    console.log(event.target.value)
+  }
+
   return (
     <main
       className="bg-yellow-100 w-full max-w-sm mx-auto mt-10 border border-yellow-600 rounded-lg shadow-lg p-4"
@@ -35,7 +41,7 @@ const App = () => {
           type="text"
           placeholder="¿Qué deseas hacer hoy?"
           required
-          value=""
+          onChange={handleChange}
         />
       </form>
 
@@ -59,7 +65,7 @@ const App = () => {
                 />
                 <div className="w-full flex justify-between items-center">
                   <div className="">
-                    My task
+                    {todo.title}
                   </div>
                   <button
                     className="bg-red-300 rounded-lg px-2 py-2"
