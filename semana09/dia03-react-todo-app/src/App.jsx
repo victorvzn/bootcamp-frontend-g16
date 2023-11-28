@@ -59,7 +59,19 @@ const App = () => {
   const handleCompleted = (event) => {
     console.log('Completando tarea...')
 
+    const idSelected = event.target.dataset.id
+    const isChecked = event.target.checked
 
+    const newTodos = todos.map(todo => {
+      if (todo.id === idSelected) {
+        return { ...todo, completed: isChecked }
+      }
+      return todo
+    })
+
+    // console.log(newTodos)
+
+    setTodos(newTodos)
   }
 
   return (
@@ -109,7 +121,9 @@ const App = () => {
                   onChange={handleCompleted}
                 />
                 <div className="w-full flex justify-between items-center">
-                  <div className="">
+                  <div
+                    className={`${todo.completed ? 'line-through' : ''}`}
+                  >
                     {todo.title}
                     {/* {todo.id} */}
                   </div>
