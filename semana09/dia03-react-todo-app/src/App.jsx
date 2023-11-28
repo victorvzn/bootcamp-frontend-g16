@@ -56,6 +56,12 @@ const App = () => {
     // console.log('Eliminando tarea...', idSelected)
   }
 
+  const handleCompleted = (event) => {
+    console.log('Completando tarea...')
+
+
+  }
+
   return (
     <main
       className="bg-yellow-100 w-full max-w-sm mx-auto mt-10 border border-yellow-600 rounded-lg shadow-lg p-4"
@@ -98,6 +104,9 @@ const App = () => {
                 <input
                   className="mr-2"
                   type="checkbox"
+                  checked={todo.completed}
+                  data-id={todo.id}
+                  onChange={handleCompleted}
                 />
                 <div className="w-full flex justify-between items-center">
                   <div className="">
