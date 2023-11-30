@@ -19,6 +19,12 @@ const AppointmentsForm = () => {
           className="border p-3 shadow-md rounded-md"
         />
         <input
+          type="text"
+          name="ownerName"
+          placeholder="Dueño de la mascota"
+          className="border p-3 shadow-md rounded-md"
+        />
+        <input
           type="date"
           name="appintmentDate"
           placeholder="Fecha de la cita"

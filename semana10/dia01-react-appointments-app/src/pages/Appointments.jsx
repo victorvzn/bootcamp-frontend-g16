@@ -6,7 +6,7 @@ const Appointments = () => {
     <>
       <AppointmentsForm />
 
-      <AppointmentsList />
+      <AppointmentsList appointments={[1,2,3,4]} />
     </>
   )
 }
