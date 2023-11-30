@@ -1,9 +1,9 @@
 const AppointmentsForm = () => {
   return (
-    <section>
+    <section className="w-96 p-4">
       <h2 className="text-2xl text-center mb-4">Nuevo paciente</h2>
 
-      <form>
+      <form className="flex flex-col gap-4">
         <input
           type="text"
           name="petName"
