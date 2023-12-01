@@ -104,6 +104,9 @@ const AppointmentsForm = ({ onSaveAppointment, appointment }) => {
           onChange={handleChange}
           value={form.symptoms}
         />
+
+        {/* TODO: Al guardar una cita editada actualizar los datos en la lista de citas */}
+        
         <input
           type="submit"
           className="border p-2 bg-green-800 text-white rounded-md cursor-pointer"
