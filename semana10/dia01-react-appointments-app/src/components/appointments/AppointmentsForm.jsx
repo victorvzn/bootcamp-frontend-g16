@@ -1,6 +1,6 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
-const AppointmentsForm = ({ onSaveAppointment }) => {
+const AppointmentsForm = ({ onSaveAppointment, appointment }) => {
   const INITIAL_FORM_STATE = {
     id: '',
     petName: '',
@@ -12,6 +12,14 @@ const AppointmentsForm = ({ onSaveAppointment }) => {
   }
 
   const [form, setForm] = useState(INITIAL_FORM_STATE)
+
+  useEffect(() => {
+    console.log('Estoy en el form y solo me ejecuto cuando se crea el formulario')
+    const hasAppintment = Object.keys(appointment).length > 0
+    if (hasAppintment) {
+      setForm(appointment)
+    }
+  }, [appointment])
 
   const handleChange = (event) => {
     // console.log(event.target.name)

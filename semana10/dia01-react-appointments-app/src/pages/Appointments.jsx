@@ -4,6 +4,7 @@ import AppointmentsList from "../components/appointments/AppointmentsList"
 
 const Appointments = () => {
   const [appointments, setAppointments] = useState([])
+  const [appointmentSelected, setAppointmentSelected] = useState({})
 
   const handleSaveAppointment = (form) => {
     // Guardamos lo que nos entregue el AppointmentsForm en el estado appointments
@@ -23,12 +24,14 @@ const Appointments = () => {
 
   const handleEdit = (appointment) => {
     console.log(appointment)
+    setAppointmentSelected(appointment)
   }
 
   return (
     <>
       <AppointmentsForm
         onSaveAppointment={handleSaveAppointment}
+        appointment={appointmentSelected}
       />
 
       <AppointmentsList
