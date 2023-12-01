@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 export default function App() {
-  const [pokemons, setPokemons] = useState({})
+  const [pokemons, setPokemons] = useState([])
 
   useEffect(() => {
     console.log('useeffect1: se ejecuta la primera vez')
