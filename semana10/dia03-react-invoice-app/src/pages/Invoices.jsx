@@ -1,8 +1,13 @@
+import Header from "../components/Header"
 import InvoiceList from "../components/invoices/InvoiceList"
 
 const Invoices = ({ invoices }) => {
   return (
-    <InvoiceList invoices={invoices} />
+    <>
+      <Header title='Invoices' />
+
+      <InvoiceList invoices={invoices} />
+    </>
   )
 }
 
