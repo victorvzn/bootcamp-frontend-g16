@@ -65,7 +65,7 @@
     {
       "id": "3bd3285f-9512-4cf4-b957-47c6715934a9",
       "code": "RT3080",
-      "status": "pending",
+      "status": "paid",
       "bill": {
         "from": {
           "streetAddress": "19 Union Terrace",
