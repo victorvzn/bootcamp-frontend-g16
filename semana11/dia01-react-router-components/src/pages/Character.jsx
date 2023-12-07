@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 
 const Character = () => {
   const { id } = useParams()
@@ -26,7 +26,11 @@ const Character = () => {
         {/* {JSON.stringify(character)} */}
         <img src={character?.image} />
         <strong>{character?.status}</strong>
+        <Link to='/' className="font-bold text-blue-700">
+          Back home
+        </Link>
       </div>
+
     </>
 
   )
