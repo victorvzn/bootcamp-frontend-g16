@@ -4,6 +4,7 @@ import Register from "./pages/Register";
 import LayoutBase from "./layouts/LayoutBase";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import FranklinPeña from "./pages/alumnos/FranklinPeña";
 
 export default function App() {
   return (
@@ -12,8 +13,10 @@ export default function App() {
           <Route path='/' element={<LayoutBase />}>
             <Route index element={<Home />} />
 
+
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
+            <Route path="/franklin-peña" element={<FranklinPeña />} />
           </Route>
         </Routes>
     </BrowserRouter>
