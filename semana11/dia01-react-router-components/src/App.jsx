@@ -2,8 +2,10 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import LayoutBase from "./layouts/LayoutBase";
+import Urquizo from "./pages/alumnos/Urquizo";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 export default function App() {
   return (
@@ -14,6 +16,7 @@ export default function App() {
 
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
+            <Route path='/bryan-urquizo' element={<Urquizo />} />
           </Route>
         </Routes>
     </BrowserRouter>
