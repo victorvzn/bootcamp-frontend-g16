@@ -2,8 +2,11 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import LayoutBase from "./layouts/LayoutBase";
+import Urquizo from "./pages/alumnos/Urquizo";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import ClaudiaAbril from "./pages/alumnos/ClaudiaAbril";
 import FranklinPeña from "./pages/alumnos/FranklinPeña";
 
 export default function App() {
@@ -16,6 +19,9 @@ export default function App() {
 
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
+
+            <Route path='/claudia-abril' element={<ClaudiaAbril />} />
+            <Route path='/bryan-urquizo' element={<Urquizo />} />
             <Route path="/franklin-peña" element={<FranklinPeña />} />
           </Route>
         </Routes>
