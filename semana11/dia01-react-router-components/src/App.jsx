@@ -10,6 +10,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import ClaudiaAbril from "./pages/alumnos/ClaudiaAbril";
 import FranklinPeña from "./pages/alumnos/FranklinPeña";
+import Character from "./pages/Character";
 
 export default function App() {
   return (
@@ -17,7 +18,7 @@ export default function App() {
         <Routes>
           <Route path='/' element={<LayoutBase />}>
             <Route index element={<Home />} />
-
+            <Route path='/character/:id' element={<Character />} />
 
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
