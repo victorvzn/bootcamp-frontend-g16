@@ -5,6 +5,7 @@ import { TbChevronLeft } from "react-icons/tb";
 import BaseTag from "../components/shared/BaseTag";
 import { useEffect, useState } from "react";
 import { getInvoice } from "../services/invoices";
+import BaseButton from "../components/shared/BaseButton";
 
 const InvoiceDetail = () => {
   const { id } = useParams()
@@ -38,7 +39,7 @@ const InvoiceDetail = () => {
         <div className="flex items-center text-white gap-3">
           <h3>Status</h3>
           <BaseTag
-            label='Pending'
+            label={invoice.status}
             bgColor='bg-orange-400/20'
             dotColor='text-orange-400'
           />
@@ -47,18 +48,21 @@ const InvoiceDetail = () => {
         <div className="flex items-center gap-3">
           {/* TODO: Crear un componente llamado BaseButton que puede ser reutilizado más abajo */}
           <Link to={`/invoices/${id}/edit`}>
-            <button className="rounded-full px-5 py-4 font-semibold text-white bg-slate-600">
-              Edit
-            </button>
+            <BaseButton
+              label='Edit'
+              bgColor='bg-slate-600'
+            />
           </Link>
 
-          <button className="rounded-full px-5 py-4 font-semibold text-white bg-red-500">
-            Delete
-          </button>
+          <BaseButton
+            label='Delete'
+            bgColor='bg-red-500'
+          />
 
-          <button className="rounded-full px-5 py-4 font-semibold text-white bg-violet-500">
-            Mark as Paid
-          </button>
+          <BaseButton
+            label='Mark as Paid'
+            bgColor='bg-violet-500'
+          />
         </div>
       </header>
 
