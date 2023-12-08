@@ -28,6 +28,7 @@ const InvoiceDetail = () => {
         </div>
 
         <div className="flex items-center gap-3">
+          {/* TODO: Crear un componente llamado BaseButton que puede ser reutilizado más abajo */}
           <button className="rounded-full px-5 py-4 font-semibold text-white bg-slate-600">
             Edit
           </button>
