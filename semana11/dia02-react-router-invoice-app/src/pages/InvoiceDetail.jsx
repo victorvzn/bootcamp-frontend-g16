@@ -46,9 +46,11 @@ const InvoiceDetail = () => {
 
         <div className="flex items-center gap-3">
           {/* TODO: Crear un componente llamado BaseButton que puede ser reutilizado más abajo */}
-          <button className="rounded-full px-5 py-4 font-semibold text-white bg-slate-600">
-            Edit
-          </button>
+          <Link to={`/invoices/${id}/edit`}>
+            <button className="rounded-full px-5 py-4 font-semibold text-white bg-slate-600">
+              Edit
+            </button>
+          </Link>
 
           <button className="rounded-full px-5 py-4 font-semibold text-white bg-red-500">
             Delete

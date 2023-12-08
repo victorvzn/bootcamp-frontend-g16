@@ -1,4 +1,5 @@
 import { TbSquareRoundedPlus } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 const Header = ({ title }) => {
   return (
@@ -8,10 +9,12 @@ const Header = ({ title }) => {
         <span>There are 7 total invoices</span>
       </div>
 
-      <button className="bg-indigo-400 rounded-full px-5 py-3 font-extrabold text-white flex justify-between items-center gap-4">
-        <TbSquareRoundedPlus size="2rem" />
-        New Invoice
-      </button>
+      <Link to='/invoices/new'>
+        <button className="bg-indigo-400 rounded-full px-5 py-3 font-extrabold text-white flex justify-between items-center gap-4">
+          <TbSquareRoundedPlus size="2rem" />
+          New Invoice
+        </button>
+      </Link>
     </header>
   )
 }
