@@ -5,7 +5,7 @@ import { Link, Outlet } from 'react-router-dom'
 const LayoutBase = () => {
   return (
     <>
-      <header className='bg-amber-200 py-4 px-6'>
+      <header className='py-4 px-6 text-white'>
         <div className="container mx-auto flex justify-between">
           <h1 className="font-bold">Invoice App</h1>
           <nav className="flex gap-4">
