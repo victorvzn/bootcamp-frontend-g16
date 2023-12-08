@@ -11,6 +11,7 @@ const LayoutBase = () => {
           <nav className="flex gap-4">
             <Link to="/home" className="hover:font-bold">Home</Link>
             <Link to="/" className="hover:font-bold">Login</Link>
+            <Link to="/invoices" className="hover:font-bold">Invoices</Link>
           </nav>
         </div>
       </header>

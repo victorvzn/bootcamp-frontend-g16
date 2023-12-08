@@ -1,6 +1,7 @@
 import { TbChevronRight } from "react-icons/tb";
 import { formatNumber } from "../../utils";
 import BaseTag from "../shared/BaseTag";
+import { Link } from "react-router-dom";
 
 const InvoiceList = ({ invoices }) => {
   return (
@@ -36,7 +37,9 @@ const InvoiceList = ({ invoices }) => {
               }
             </div>
             <div className="w-10 flex justify-center">
-              <TbChevronRight />
+              <Link to={`/invoices/${invoice.id}`}>
+                <TbChevronRight />
+              </Link>
             </div>
           </article>
         )
