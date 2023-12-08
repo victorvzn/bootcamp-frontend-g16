@@ -41,6 +41,10 @@ const InvoiceDetail = () => {
           </button>
         </div>
       </header>
+
+      <section>
+        
+      </section>
     </main>
   )
 }
