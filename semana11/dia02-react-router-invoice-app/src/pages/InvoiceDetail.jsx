@@ -8,13 +8,19 @@ import { getInvoice } from "../services/invoices";
 
 const InvoiceDetail = () => {
   const { id } = useParams()
-  const [invoice, setInvoice] = useState({})
+  const [invoice, setInvoice] = useState(null)
   
   useEffect(() => {
     getInvoice(id)
       .then(setInvoice)
       // .then(invoice => setInvoice(invoice))
   }, [])
+
+  if (!invoice) {
+    return (
+      <h1>No hay data</h1>
+    )
+  }
 
   return (
     <main className="w-[740px] m-auto flex flex-col gap-5">
@@ -60,14 +66,14 @@ const InvoiceDetail = () => {
         <div className="flex justify-between w-full">
           <div className="text-3cl">
             <span className="text-slate-400">#</span>
-            <span className="font-extrabold">CODE</span>
-            <div className="text-xl mt-1">DESCRIPTION</div>
+            <span className="font-extrabold">{invoice?.code}</span>
+            <div className="text-xl mt-1">{invoice?.invoice?.project?.description}</div>
           </div>
           <div className="text-sm text-right">
-            <div>ADDRESS</div>
-            <div>CITY</div>
-            <div>POSTCODE</div>
-            <div>ADDRESCOUNTRY</div>
+            <div>{invoice?.bill.from.streetAddress}</div>
+            <div>{invoice?.bill.from.city}</div>
+            <div>{invoice?.bill.from.postCode}</div>
+            <div>{invoice?.bill.from.country}</div>
           </div>
         </div>
 
@@ -75,55 +81,59 @@ const InvoiceDetail = () => {
           <div className="flex flex-col gap-10">
             <div>
               <div className="text-lg">Invoice Date</div>
-              <div className="text-xl font-extrabold">DATE</div>
+              <div className="text-xl font-extrabold">{invoice?.invoice.date}</div>
             </div>
             <div>
               <div className="text-lg">Invoice Due</div>
-              <div className="text-xl font-extrabold">INVOICE DUE</div>
+              <div className="text-xl font-extrabold">{invoice?.invoice.date}</div>
             </div>
           </div>
           <div>
             <div className="text-lg">Bill to</div>
-            <div className="text-xl font-extrabold">CLIENT NAME</div>
-            <div className="text-sm">ADDRESS</div>
-            <div className="text-sm">CITY</div>
-            <div className="text-sm">POSTCODE</div>
-            <div className="text-sm">COUNTRY</div>
+            <div className="text-xl font-extrabold">{invoice?.bill.to.client.name}</div>
+            <div className="text-sm">{invoice?.bill.to.streetAddress}</div>
+            <div className="text-sm">{invoice?.bill.to.city}</div>
+            <div className="text-sm">{invoice?.bill.to.postCode}</div>
+            <div className="text-sm">{invoice?.bill.to.country}</div>
           </div>
           <div>
             <div className="text-lg">Send to</div>
-            <div className="text-xl font-extrabold">EMAIL</div>
+            <div className="text-xl font-extrabold">
+              {invoice?.bill.to.client.email}
+            </div>
           </div>
         </div>
 
         <table className="bg-slate-600 w-full rounded-lg overflow-hidden">
           <thead>
             <tr>
-              <td className="p-4 text-lg font-normal">Item Name</td>
-              <td className="p-4 text-lg font-normal text-center w-44">QTY</td>
-              <td className="p-4 text-lg font-normal text-center w-44">Price</td>
-              <td className="p-4 text-lg font-normal text-right w-44">Total</td>
+              <td className="p-4 text-base font-normal">Item Name</td>
+              <td className="p-4 text-base font-normal text-center w-44">QTY</td>
+              <td className="p-4 text-base font-normal text-center w-44">Price</td>
+              <td className="p-4 text-base font-normal text-right w-44">Total</td>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td className="p-4 text-lg font-bold">ITEM_NAME</td>
-              <td className="p-4 text-lg font-bold text-center w-44">QTY</td>
-              <td className="p-4 text-lg font-bold text-center w-44">PRICE</td>
-              <td className="p-4 text-lg font-bold text-right w-44">TOTAL</td>
-            </tr>
-            <tr>
-              <td className="p-4 text-lg font-bold">ITEM_NAME</td>
-              <td className="p-4 text-lg font-bold text-center w-44">QTY</td>
-              <td className="p-4 text-lg font-bold text-center w-44">PRICE</td>
-              <td className="p-4 text-lg font-bold text-right w-44">TOTAL</td>
-            </tr>
+            {invoice?.invoice.items.map((item, index) => {
+              return (
+                <tr key={index}>
+                  <td className="p-4 text-sm font-bold">{item.name}</td>
+                  <td className="p-4 text-sm font-bold text-center w-44">{item.qty}</td>
+                  <td className="p-4 text-sm font-bold text-center w-44">{item.price}</td>
+                  <td className="p-4 text-sm font-bold text-right w-44">
+                    {invoice?.invoice.currency?.symbol}
+                    {item.total}
+                  </td>
+                </tr>
+              )
+            })}
           </tbody>
           <tfoot>
             <tr className="bg-black">
               <td className="p-4 text-lg font-normal" colSpan={2}>Amount Due</td>
               <td className="p-4 text-4xl font-bold text-right" colSpan={2}>
-                556.00
+                {invoice?.invoice.currency?.symbol}
+                {invoice?.invoice?.grandTotal}
               </td>
             </tr>
           </tfoot>
