@@ -9,8 +9,8 @@ const LayoutBase = () => {
         <div className="container mx-auto flex justify-between">
           <h1 className="font-bold">Invoice App</h1>
           <nav className="flex gap-4">
-            <Link to="/" className="hover:font-bold">Home</Link>
-            <Link to="/login" className="hover:font-bold">Login</Link>
+            <Link to="/home" className="hover:font-bold">Home</Link>
+            <Link to="/" className="hover:font-bold">Login</Link>
           </nav>
         </div>
       </header>
