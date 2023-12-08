@@ -11,3 +11,13 @@ export const fetchInvoices = async () => {
 
   return data
 }
+
+export const getInvoice = async (id) => {
+  const url = `${API_URL}/invoices/${id}`
+
+  const response = await fetch(url)
+
+  const data = response.json()
+
+  return data
+}

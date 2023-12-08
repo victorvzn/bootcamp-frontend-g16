@@ -1,10 +1,21 @@
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 
 import { TbChevronLeft } from "react-icons/tb";
 
 import BaseTag from "../components/shared/BaseTag";
+import { useEffect, useState } from "react";
+import { getInvoice } from "../services/invoices";
 
 const InvoiceDetail = () => {
+  const { id } = useParams()
+  const [invoice, setInvoice] = useState({})
+  
+  useEffect(() => {
+    getInvoice(id)
+      .then(setInvoice)
+      // .then(invoice => setInvoice(invoice))
+  }, [])
+
   return (
     <main className="w-[740px] m-auto flex flex-col gap-5">
       <Link
@@ -118,6 +129,9 @@ const InvoiceDetail = () => {
           </tfoot>
         </table>
       </section>
+
+      <pre className="text-white">{JSON.stringify(invoice, null, 2)}</pre>
+
     </main>
   )
 }
