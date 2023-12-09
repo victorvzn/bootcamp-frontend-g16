@@ -57,3 +57,17 @@ export const updateInvoiceStatus = async (id, newStatus) => {
 
   return data
 }
+
+export const deleteInvoice = async (id) => {
+  const url = `${API_URL}/invoices/${id}`
+
+  const options = {
+    method: 'DELETE'
+  }
+
+  const response = await fetch(url, options)
+
+  const data = response.json()
+
+  return data
+}
