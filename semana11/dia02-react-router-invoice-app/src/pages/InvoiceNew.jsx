@@ -45,6 +45,8 @@ const InvoiceNew = () => {
   const handleChange = (event) => {
     const { name, value} = event.target
 
+    console.log(name, value)
+
     setForm({ ...form, [name]: value })
   }
 
@@ -64,6 +66,8 @@ const InvoiceNew = () => {
         <h1 className="text-4xl font-extrabold text-white">New Invoice</h1>
       </header>
 
+      <pre className="text-white">{JSON.stringify(form, null, 2)}</pre>
+
       <section>
         <form>
           <h4 className="text-violet-500 font-bold mb-5">Bill From</h4>
@@ -71,8 +75,8 @@ const InvoiceNew = () => {
           <BaseInput
             label='Street Address'
             placeholder='Codigo 234 Av.'
-            name='billFromCity'
-            value={form.billFromCity}
+            name='billFromStreetAddress'
+            value={form.billFromStreetAddress}
             onChange={handleChange}
           />
 
@@ -87,6 +91,7 @@ const InvoiceNew = () => {
             <BaseInput
               label="Post Code"
               placeholder="00000"
+              name="billFromPostCode"
               value={form.billFromPostCode}
               onChange={handleChange}
             />
