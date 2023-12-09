@@ -54,6 +54,8 @@ const InvoiceNew = () => {
     event.preventDefault();
     
     console.log('Listo para enviar la data ...', form)
+
+    
   }
 
   return (

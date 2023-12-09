@@ -21,3 +21,21 @@ export const getInvoice = async (id) => {
 
   return data
 }
+
+export const createInvoice = async (form) => {
+  const url = `${API_URL}/invoices`
+
+  const options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(form)
+  }
+
+  const response = await fetch(url, options)
+
+  const data = response.json()
+
+  return data
+}
