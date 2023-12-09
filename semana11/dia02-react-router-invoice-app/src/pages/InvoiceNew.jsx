@@ -6,6 +6,7 @@ import { useState } from "react"
 import BaseInput from "../components/shared/BaseInput"
 import BaseSelect from "../components/shared/BaseSelect"
 import BaseButton from "../components/shared/BaseButton"
+import { generateCode } from "../utils"
 
 const InvoiceNew = () => {
   const DEFAULT_FORM_VALUE = {
@@ -43,7 +44,7 @@ const InvoiceNew = () => {
   const [form, setForm] = useState(DEFAULT_FORM_VALUE)
 
   const handleChange = (event) => {
-    const { name, value} = event.target
+    const { name, value } = event.target
 
     console.log(name, value)
 
@@ -52,10 +53,60 @@ const InvoiceNew = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    
+
     console.log('Listo para enviar la data ...', form)
 
-    
+    const newCode = generateCode()
+
+    const newForm = {
+      "code": newCode,
+      "status": "draft",
+      "bill": {
+        "from": {
+          "streetAddress": form.billFromStreetAddress,
+          "city": form.billFromCity,
+          "postCode": form.billFromPostCode,
+          "country": form.billFromCountry
+        },
+        "to": {
+          "client": {
+            "name": form.billToClientName,
+            "email": form.billToClientEmail
+          },
+          "streetAddress": form.billToClientStreetAddress,
+          "city": form.billToCity,
+          "postCode": form.billToPostCode,
+          "country": form.billToCountry
+        }
+      },
+      "invoice": {
+        "date": form.invoiceDate,
+        "paymentTerms": form.paymentTerms,
+        "project": {
+          "description": form.projectDescription
+        },
+        "grandTotal": 6000,
+        "currency": {
+          "symbol": "$"
+        },
+        "items": [
+          {
+            "name": "Nintendo Switch",
+            "qty": 2,
+            "price": 2500,
+            "total": 5000
+          },
+          {
+            "name": "Juego Crash Bandicoot",
+            "qty": 5,
+            "price": 200,
+            "total": 1000
+          }
+        ]
+      }
+    }
+
+    // createInvoice()
   }
 
   return (
@@ -275,7 +326,7 @@ const InvoiceNew = () => {
             label='+ Add New Item'
             bgColor='bg-slate-800'
           >
-            
+
           </BaseButton>
 
           <div class="flex justify-end gap-2 mt-10">

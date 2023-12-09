@@ -7,3 +7,7 @@ export const formatNumber = (number) => {
 
   return new Intl.NumberFormat(localeDefault, options).format(number)
 }
+
+export const generateCode = () => {
+  return crypto.randomUUID().split('-').at(0).slice(0, 6)
+}
