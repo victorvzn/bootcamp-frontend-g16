@@ -50,6 +50,12 @@ const InvoiceNew = () => {
     setForm({ ...form, [name]: value })
   }
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    
+    console.log('Listo para enviar la data ...', form)
+  }
+
   return (
     <main className="w-[740px] m-auto flex flex-col gacp-5">
       <Link
@@ -69,7 +75,7 @@ const InvoiceNew = () => {
       <pre className="text-white">{JSON.stringify(form, null, 2)}</pre>
 
       <section>
-        <form>
+        <form onSubmit={handleSubmit}>
           <h4 className="text-violet-500 font-bold mb-5">Bill From</h4>
 
           <BaseInput
@@ -271,10 +277,10 @@ const InvoiceNew = () => {
           </BaseButton>
 
           <div class="flex justify-end gap-2 mt-10">
-            <BaseButton
+            {/* <BaseButton
               label='Cancel'
               bgColor='bg-slate-800'
-            />
+            /> */}
             <BaseButton
               label='Save Changes'
               bgColor='bg-violet-500'
