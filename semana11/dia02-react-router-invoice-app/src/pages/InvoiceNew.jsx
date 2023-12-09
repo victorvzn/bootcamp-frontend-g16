@@ -7,6 +7,7 @@ import BaseInput from "../components/shared/BaseInput"
 import BaseSelect from "../components/shared/BaseSelect"
 import BaseButton from "../components/shared/BaseButton"
 import { generateCode } from "../utils"
+import { createInvoice } from "../services/invoices"
 
 const InvoiceNew = () => {
   const DEFAULT_FORM_VALUE = {
@@ -51,7 +52,7 @@ const InvoiceNew = () => {
     setForm({ ...form, [name]: value })
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     console.log('Listo para enviar la data ...', form)
@@ -106,7 +107,17 @@ const InvoiceNew = () => {
       }
     }
 
-    // createInvoice()
+    console.log(newForm)
+
+    const res = await createInvoice(newForm)
+
+    if (res.ok) {
+      // Redireccionamos al listado de '/invoices'
+      console.log(res)
+    } else{
+      // Motramoss un mensaje de error
+    }
+
   }
 
   return (
@@ -242,7 +253,7 @@ const InvoiceNew = () => {
 
           <h5 className="text-violet-500 text-xl font-bold mb-5 mt-10">Item List</h5>
 
-          <div class="text-white grid grid-cols-5 gap-4 mb-5 items-center">
+          <div className="text-white grid grid-cols-5 gap-4 mb-5 items-center">
             <div>Item Name</div>
             <div>Qty.</div>
             <div>Price</div>
@@ -329,7 +340,7 @@ const InvoiceNew = () => {
 
           </BaseButton>
 
-          <div class="flex justify-end gap-2 mt-10">
+          <div className="flex justify-end gap-2 mt-10">
             {/* <BaseButton
               label='Cancel'
               bgColor='bg-slate-800'
