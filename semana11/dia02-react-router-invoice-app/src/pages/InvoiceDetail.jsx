@@ -4,23 +4,34 @@ import { TbChevronLeft } from "react-icons/tb";
 
 import BaseTag from "../components/shared/BaseTag";
 import { useEffect, useState } from "react";
-import { getInvoice } from "../services/invoices";
+import { getInvoice, updateInvoiceStatus } from "../services/invoices";
 import BaseButton from "../components/shared/BaseButton";
 
 const InvoiceDetail = () => {
   const { id } = useParams()
   const [invoice, setInvoice] = useState(null)
+  const [refresh, setRefresh] = useState(0)
   
   useEffect(() => {
     getInvoice(id)
       .then(setInvoice)
       // .then(invoice => setInvoice(invoice))
-  }, [])
+  }, [refresh])
 
   if (!invoice) {
     return (
       <h1>No hay data</h1>
     )
+  }
+
+  const handleMarkAsPaid = async () => {
+    console.log('mark as paid clicked...')
+
+    const res = await updateInvoiceStatus(id, 'paid')
+
+    if (res) {
+      setRefresh(refresh + 1) 
+    }
   }
 
   return (
@@ -62,6 +73,7 @@ const InvoiceDetail = () => {
           <BaseButton
             label='Mark as Paid'
             bgColor='bg-violet-500'
+            onClick={handleMarkAsPaid}
           />
         </div>
       </header>
