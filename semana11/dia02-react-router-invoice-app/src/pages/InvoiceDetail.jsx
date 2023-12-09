@@ -49,11 +49,15 @@ const InvoiceDetail = () => {
       >
         <div className="flex items-center text-white gap-3">
           <h3>Status</h3>
-          <BaseTag
-            label={invoice.status}
-            bgColor='bg-orange-400/20'
-            dotColor='text-orange-400'
-          />
+          {invoice.status === 'paid'
+            && <BaseTag label={invoice.status} bgColor='bg-emerald-400/20' dotColor='text-emerald-400'  />
+          }
+          {invoice.status === 'pending'
+            && <BaseTag label={invoice.status} bgColor='bg-orange-400/20' dotColor='text-orange-400'  />
+          }
+          {invoice.status === 'draft'
+            && <BaseTag label={invoice.status} bgColor='bg-slate-400/20' dotColor='text-slate-400'  />
+          }
         </div>
 
         <div className="flex items-center gap-3">
