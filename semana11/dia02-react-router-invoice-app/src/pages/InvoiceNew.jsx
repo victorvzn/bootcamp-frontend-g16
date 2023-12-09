@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom"
-
 import { TbChevronLeft, TbTrashFilled } from "react-icons/tb"
 import { useState } from "react"
+import Swal from 'sweetalert2'
 
 import BaseInput from "../components/shared/BaseInput"
 import BaseSelect from "../components/shared/BaseSelect"
@@ -117,6 +117,12 @@ const InvoiceNew = () => {
     
     if (res) {
       // Redireccionamos al listado de '/invoices'
+      Swal.fire({
+        title: 'New Invoice',
+        text: 'Se guardó correctamento!',
+        icon: 'success'
+      })
+
       navigate('/invoices')
     } else{
       // Motramoss un mensaje de error
