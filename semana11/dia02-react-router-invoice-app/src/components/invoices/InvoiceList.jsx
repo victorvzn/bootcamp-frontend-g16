@@ -17,7 +17,7 @@ const InvoiceList = ({ invoices }) => {
           >
             <div className="w-20">
               <span className="text-slate-400">#</span>
-              <span className="font-extrabold">{invoice.code}</span>
+              <span className="font-extrabold uppercase">{invoice.code}</span>
             </div>
             <div className="w-44 font-semibold">{invoice.invoice.date}</div>
             <div className="w-44 font-semibold">{invoice.bill.to.client.name}</div>

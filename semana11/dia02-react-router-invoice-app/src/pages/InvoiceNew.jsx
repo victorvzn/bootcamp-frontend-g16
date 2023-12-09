@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 import { TbChevronLeft, TbTrashFilled } from "react-icons/tb"
 import { useState } from "react"
@@ -10,6 +10,8 @@ import { generateCode } from "../utils"
 import { createInvoice } from "../services/invoices"
 
 const InvoiceNew = () => {
+  const navigate = useNavigate()
+
   const DEFAULT_FORM_VALUE = {
     billFromStreetAddress: '',
     billFromCity: '',
@@ -111,9 +113,11 @@ const InvoiceNew = () => {
 
     const res = await createInvoice(newForm)
 
-    if (res.ok) {
+    console.log(res)
+    
+    if (res) {
       // Redireccionamos al listado de '/invoices'
-      console.log(res)
+      navigate('/invoices')
     } else{
       // Motramoss un mensaje de error
     }
