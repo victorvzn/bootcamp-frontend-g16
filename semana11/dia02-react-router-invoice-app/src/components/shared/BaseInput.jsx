@@ -8,7 +8,7 @@ const BaseInput = ({ type='text', name, classx, label, value, placeholder, onCha
         name={name}
         placeholder={placeholder}
         value={value}
-        onChange={onChange}
+        onChange={(e) => onChange(e)}
       />
     </label>
   )

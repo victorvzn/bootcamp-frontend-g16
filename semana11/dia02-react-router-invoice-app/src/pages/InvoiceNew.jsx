@@ -8,6 +8,7 @@ import BaseSelect from "../components/shared/BaseSelect"
 import BaseButton from "../components/shared/BaseButton"
 import { generateCode } from "../utils"
 import { createInvoice } from "../services/invoices"
+import ItemList from "../components/shared/items/ItemList"
 
 const InvoiceNew = () => {
   const navigate = useNavigate()
@@ -263,92 +264,7 @@ const InvoiceNew = () => {
 
           <h5 className="text-violet-500 text-xl font-bold mb-5 mt-10">Item List</h5>
 
-          <div className="text-white grid grid-cols-5 gap-4 mb-5 items-center">
-            <div>Item Name</div>
-            <div>Qty.</div>
-            <div>Price</div>
-            <div>Total</div>
-            <div></div>
-            <>
-              <BaseInput
-                name="name"
-                placeholder=""
-                // value={item.name}
-                onChange={handleChange}
-              />
-              <BaseInput
-                type="number"
-                name="qty"
-                placeholder="0"
-                // value={item.qty}
-                onChange={handleChange}
-              />
-              <BaseInput
-                type="number"
-                placeholder="0.00"
-                // value={item.price}
-                onChange={handleChange}
-              />
-              <div>156.01</div>
-              <div>
-                <TbTrashFilled className="text-lg" />
-              </div>
-              <BaseInput
-                name="name"
-                placeholder=""
-                // value={item.name}
-                onChange={handleChange}
-              />
-              <BaseInput
-                type="number"
-                name="qty"
-                placeholder="0"
-                // value={item.qty}
-                onChange={handleChange}
-              />
-              <BaseInput
-                type="number"
-                placeholder="0.00"
-                // value={item.price}
-                onChange={handleChange}
-              />
-              <div>156.01</div>
-              <div>
-                <TbTrashFilled className="text-lg" />
-              </div>
-              <BaseInput
-                name="name"
-                placeholder=""
-                // value={item.name}
-                onChange={handleChange}
-              />
-              <BaseInput
-                type="number"
-                name="qty"
-                placeholder="0"
-                // value={item.qty}
-                onChange={handleChange}
-              />
-              <BaseInput
-                type="number"
-                placeholder="0.00"
-                // value={item.price}
-                onChange={handleChange}
-              />
-              <div>156.01</div>
-              <div>
-                <TbTrashFilled className="text-lg" />
-              </div>
-            </>
-          </div>
-
-          <BaseButton
-            classx='w-full'
-            label='+ Add New Item'
-            bgColor='bg-slate-800'
-          >
-
-          </BaseButton>
+          <ItemList />
 
           <div className="flex justify-end gap-2 mt-10">
             {/* <BaseButton
@@ -356,6 +272,7 @@ const InvoiceNew = () => {
               bgColor='bg-slate-800'
             /> */}
             <BaseButton
+              type="submit"
               label='Save Changes'
               bgColor='bg-violet-500'
             />
