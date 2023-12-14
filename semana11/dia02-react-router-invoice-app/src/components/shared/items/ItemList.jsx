@@ -31,12 +31,14 @@ const ItemList = () => {
     // clonedItems[rowIndex][name] = value
     // clonedItems[rowIndex]['total'] = qty * price
 
-    setItems(clonedItems => {
+    setItems(items => {
+      const clonedItems = [...items]
+
       const selectedItem = clonedItems[rowIndex]
     
       const { qty, price } = selectedItem
   
-      console.log(rowIndex, name, value, qty, price)
+      console.log(rowIndex, name, value, qty, price, items)
   
       clonedItems[rowIndex][name] = value
       clonedItems[rowIndex]['total'] = qty * price
