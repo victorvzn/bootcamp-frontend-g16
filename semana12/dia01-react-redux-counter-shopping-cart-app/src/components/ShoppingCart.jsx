@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux"
 
 import { clearCart, removeToCart } from "../store/cart"
+import { formatNumber } from "../utils"
 
 const ShoppingCart = () => {
   const cart = useSelector(state => state.cart)
@@ -53,8 +54,8 @@ const ShoppingCart = () => {
         }) }
       </div>
 
-      <div style={{ paddingTop: '1rem' }}>
-        <strong>TOTAL:</strong> S/ {total}
+      <div style={{ paddingTop: '1rem', fontSize: '1.5rem' }}>
+        <strong>TOTAL:</strong> <span >S/ {formatNumber(total)}</span>
       </div>
     </div>
   )
