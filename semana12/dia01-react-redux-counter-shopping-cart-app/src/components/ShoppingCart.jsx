@@ -1,7 +1,21 @@
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
+
+import { removeToCart } from "../store/cart"
 
 const ShoppingCart = () => {
   const cart = useSelector(state => state.cart)
+
+  const dispatch = useDispatch()
+
+  if (cart.length === 0) {
+    return (
+      <div>
+        <h3>Shopping Cart</h3>
+        
+        <p>Shopping cart empty</p>
+      </div>
+    )
+  }
 
   return (
     <div>
@@ -15,6 +29,7 @@ const ShoppingCart = () => {
             <button
               key={product.id}
               style={{ backgroundColor: '#FF8080' }}
+              onClick={() => dispatch(removeToCart(product.id))}
             >
               {product.title} - S/ {product.price}
             </button>
