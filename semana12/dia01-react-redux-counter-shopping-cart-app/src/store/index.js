@@ -21,6 +21,6 @@ export const { increment, decrement } = counterSlice.actions // Exportamos las a
 
 export const store = configureStore({
   reducer: {
-    counter: counterSlice // Exportando el estado inicial y a los reducers del slice
+    counter: counterSlice.reducer // Exportando el estado inicial y a los reducers del slice
   }
 })
