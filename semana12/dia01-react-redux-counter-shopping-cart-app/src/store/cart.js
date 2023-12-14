@@ -14,7 +14,8 @@ export const cartSlice = createSlice({
       return [
         ...state,
         {
-          ...newProduct
+          ...newProduct,
+          quantity: 1
         }
       ]
     },
@@ -26,6 +27,7 @@ export const cartSlice = createSlice({
     },
     clearCart: (state) => {
       console.log('clearCart')
+      return []
     }
   }
 })

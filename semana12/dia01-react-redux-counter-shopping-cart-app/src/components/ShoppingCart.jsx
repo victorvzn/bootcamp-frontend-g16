@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux"
 
-import { removeToCart } from "../store/cart"
+import { clearCart, removeToCart } from "../store/cart"
 
 const ShoppingCart = () => {
   const cart = useSelector(state => state.cart)
@@ -21,6 +21,14 @@ const ShoppingCart = () => {
     <div>
       <h3>Shopping Cart</h3>
 
+      <div style={{ marginBottom: '1rem'}}>
+        <button
+          onClick={() => dispatch(clearCart())}
+        >
+          Clean cart
+        </button>
+      </div>
+
       {/* <pre>{JSON.stringify(cart, null, 2)}</pre> */}
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
@@ -31,7 +39,7 @@ const ShoppingCart = () => {
               style={{ backgroundColor: '#FF8080' }}
               onClick={() => dispatch(removeToCart(product.id))}
             >
-              {product.title} - S/ {product.price}
+              {product.title} - S/ {product.price} (Qty: {product.quantity})
             </button>
           )
         }) }

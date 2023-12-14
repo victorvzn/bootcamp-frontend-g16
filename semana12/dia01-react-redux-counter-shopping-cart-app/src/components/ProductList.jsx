@@ -11,7 +11,7 @@ const ProductList = ({ products }) => {
     <section style={{ display: 'flex', flexDirection: 'column', padding: '1rem' }}>
       <h3>ProductList</h3>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1rem2'}}>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1rem'}}>
         {products && products.map(product => {
           return (
             <button
