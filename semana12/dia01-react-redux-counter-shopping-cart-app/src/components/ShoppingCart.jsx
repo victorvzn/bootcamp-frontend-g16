@@ -55,7 +55,7 @@ const ShoppingCart = () => {
       </div>
 
       <div style={{ paddingTop: '1rem', fontSize: '1.5rem' }}>
-        <strong>TOTAL:</strong> <span >S/ {formatNumber(total)}</span>
+        <strong>TOTAL:</strong> <span>S/ {formatNumber(total)}</span>
       </div>
     </div>
   )

@@ -19,7 +19,8 @@ const ProductList = ({ products }) => {
               style={{ backgroundColor: '#F4F27E' }}
               onClick={() => dispatch(addToCart(product))}
             >
-              {product.title}
+              <img src={product.thumbnail} width={150} />
+              <p>{product.title}</p>
             </button>
           )
         })}
