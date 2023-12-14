@@ -7,6 +7,14 @@ const ShoppingCart = () => {
 
   const dispatch = useDispatch()
 
+  const total = cart.reduce((acc, product) => {
+    const qty = product.quantity
+    const price = product.price
+    const subtotal = qty * price
+
+    return acc + subtotal
+  }, 0)
+
   if (cart.length === 0) {
     return (
       <div>
@@ -43,6 +51,10 @@ const ShoppingCart = () => {
             </button>
           )
         }) }
+      </div>
+
+      <div style={{ paddingTop: '1rem' }}>
+        <strong>TOTAL:</strong> S/ {total}
       </div>
     </div>
   )
