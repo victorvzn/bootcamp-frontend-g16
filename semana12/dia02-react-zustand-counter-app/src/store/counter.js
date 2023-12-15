@@ -6,10 +6,16 @@ export const useCounterStore = create(
     count: 1,
     // Actions
     increment: () => {
-      // ???
+      set((state) => {
+        // Lógica adicional
+        return {
+          count: state.count + 1
+        }
+      })
     },
     decrement: () => {
-      // ???
-    }
+      set((state) => ({ count: state.count - 1 }))
+    },
+    // increaseByValue: (value) => // ??
   })
 )
