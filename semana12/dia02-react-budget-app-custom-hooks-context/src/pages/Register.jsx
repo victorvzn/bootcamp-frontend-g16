@@ -1,6 +1,10 @@
 import { useState } from "react"
 
+import { useNavigate } from 'react-router-dom'
+
 const Register = () => {
+  const navigate = useNavigate()
+
   const [form, setForm] = useState({
     fullname: '',
     email: '',
@@ -43,6 +47,7 @@ const Register = () => {
     })
 
     // Redireccionar a la vista /login
+    navigate('/login')
   }
 
   return (
