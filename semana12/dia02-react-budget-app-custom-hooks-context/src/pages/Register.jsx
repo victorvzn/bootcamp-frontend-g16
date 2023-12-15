@@ -14,10 +14,35 @@ const Register = () => {
     setForm({ ...form, [name]: value })
   }
 
-  const handleRegister = (event) => {
+  const handleRegister = async (event) => {
     event.preventDefault();
     
-    console.log('Guardando la data del usuario...')
+    // console.log('Guardando la data del usuario...')
+
+    const url = 'https://65728910d61ba6fcc0152a3d.mockapi.io/api/v1/users'
+
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(form)
+    }
+
+    const response = await fetch(url, options)
+
+    const data = await response.json()
+
+    console.log(data)
+
+    setForm({
+      fullname: '',
+      email: '',
+      password: '',
+      budget: 0,
+    })
+
+    // Redireccionar a la vista /login
   }
 
   return (
@@ -54,7 +79,7 @@ const Register = () => {
         <label className="font-medium">
           Password
           <input
-            type="text"
+            type="password"
             name="password"
             paceholder="Sup3rSecre3tPass"
             className="border w-full p-3"
