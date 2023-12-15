@@ -16,6 +16,8 @@ export const useCounterStore = create(
     decrement: () => {
       set((state) => ({ count: state.count - 1 }))
     },
-    // increaseByValue: (value) => // ??
+    increaseByValue: (value) => {
+      set((state) => ({ count: state.count + value }))
+    }
   })
 )
