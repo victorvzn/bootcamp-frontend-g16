@@ -31,7 +31,18 @@ const LayoutBase = () => {
                   Welcome, {user.fullname}
                 </div>
 
-                <Link to='/' className='hover:text-orange-800'>Home</Link>
+                <Link
+                  to='/'
+                  className='hover:text-orange-800'
+                >
+                  Home
+                </Link>
+                <Link
+                  to='/new-budget'
+                  className='hover:text-orange-800'
+                >
+                  New Budget
+                </Link>
 
                 <button
                   className='text-red-800 font-medium'
