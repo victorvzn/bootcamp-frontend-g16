@@ -1,15 +1,18 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
 
 import { useNavigate } from 'react-router-dom'
 
 import { Toaster, toast } from 'sonner'
 
-import useAuth from '../hooks/useAuth.js'
+// import useAuth from '../hooks/useAuth.js'
+import { UserContext } from '../context/UserContext'
 
 const Login = () => {
+  const { storeUser } = useContext(UserContext)
+
   const navigate = useNavigate()
 
-  const { setAuth } = useAuth()
+  // const { setAuth } = useAuth()
 
   const [form, setForm] = useState({
     email: '',
@@ -47,7 +50,7 @@ const Login = () => {
 
       delete clonedData.password
 
-      setAuth(clonedData)
+      storeUser(clonedData)
 
       navigate('/')
     } else {

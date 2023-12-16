@@ -6,22 +6,25 @@ import Register from "../pages/Register"
 import LayoutBase from "../layouts/LayoutBase"
 
 import PrivateRoute from "./PrivateRoute"
+import { UserProvider } from "../context/UserContext"
 
 const Router = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<LayoutBase />}>
+    <UserProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<LayoutBase />}>
 
-          <Route element={<PrivateRoute />}>
-            <Route index element={<Home />} />
+            <Route element={<PrivateRoute />}>
+              <Route index element={<Home />} />
+            </Route>
+
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
           </Route>
-
-          <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<Register />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+        </Routes>
+      </BrowserRouter>
+    </UserProvider>
   )
 }
 

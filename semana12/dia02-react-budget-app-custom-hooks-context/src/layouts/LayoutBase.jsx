@@ -1,15 +1,19 @@
-import React from 'react'
+import { useContext } from 'react'
 import { Link, Outlet, useNavigate } from 'react-router-dom'
 
-import useAuth from '../hooks/useAuth'
+// import useAuth from '../hooks/useAuth'
+import { UserContext } from '../context/UserContext'
 
 const LayoutBase = () => {
-  const { isAuth, logout } = useAuth()
+  const { user, cleanUser } = useContext(UserContext)
+
+  // const { isAuth, logout } = useAuth()
 
   const navigate = useNavigate()
 
   const handleLogout = () => {
-    logout()
+    // logout()
+    cleanUser()
   
     navigate('/login')
   }
@@ -19,8 +23,9 @@ const LayoutBase = () => {
       <header className='bg-amber-200 py-4 px-6'>
         <div className='container mx-auto flex justify-between'>
           <h1 className='font-bold'>Budget App</h1>
+          {/* {JSON.stringify(user)} */}
           <nav className='flex gap-3'>
-            {isAuth && (
+            {user?.email && (
               <>
                 <Link to='/'>Home</Link>
                 <button
@@ -30,7 +35,7 @@ const LayoutBase = () => {
               </>
             )}
 
-            {!isAuth && (
+            {!user?.email && (
               <>
                 <Link to='/login'>Login</Link>
                 <Link to='/register'>Register</Link>
