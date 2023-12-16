@@ -43,6 +43,12 @@ const LayoutBase = () => {
                 >
                   New Budget
                 </Link>
+                <Link
+                  to='/new-expense'
+                  className='hover:text-orange-800'
+                >
+                  New Expense
+                </Link>
 
                 <button
                   className='text-red-800 font-medium'

@@ -1,4 +1,4 @@
-import { useState, useContext } from "react"
+import { useState, useContext, useEffect } from "react"
 
 import { UserContext } from '../context/UserContext'
 
@@ -10,6 +10,21 @@ const NewBudget = () => {
   const [form, setForm] = useState({
     budget: ''
   })
+
+  const getBudgetUser = async (userId) => {
+    const url = `https://65728910d61ba6fcc0152a3d.mockapi.io/api/v1/users/${userId}`
+
+    const response = await fetch(url)
+
+    const data = await response.json()
+
+    return data.budget
+  }
+
+  useEffect(() => {
+    getBudgetUser(user.id)
+      .then(budget => setForm({ budget }))
+  }, [])
 
   const handleChange = (event) => {
     const { name, value } = event.target
@@ -51,8 +66,8 @@ const NewBudget = () => {
 
       <h1 className="text-center text-3xl mb-8">Budget App - New budget</h1>
 
-      {JSON.stringify(form)}
-      {JSON.stringify(user)}
+      {/* {JSON.stringify(form)} */}
+      {/* {JSON.stringify(user)} */}
 
       <div className="flex flex-col gap-4 bg-slate-200 p-8 shadow-lg">
         <label className="font-medium">
