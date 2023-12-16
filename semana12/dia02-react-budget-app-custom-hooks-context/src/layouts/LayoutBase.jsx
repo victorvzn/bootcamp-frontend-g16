@@ -27,7 +27,12 @@ const LayoutBase = () => {
           <nav className='flex gap-3'>
             {user?.email && (
               <>
-                <Link to='/'>Home</Link>
+                <div className='font-bold'>
+                  Welcome, {user.fullname}
+                </div>
+
+                <Link to='/' className='hover:text-orange-800'>Home</Link>
+
                 <button
                   className='text-red-800 font-medium'
                   onClick={handleLogout}
