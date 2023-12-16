@@ -14,7 +14,7 @@ const useAuth = () => {
   }
 
   const logout = () => {
-    setUser({ email: '  '})
+    setUser({ email: ''})
 
     localStorage.removeItem('auth')
   }

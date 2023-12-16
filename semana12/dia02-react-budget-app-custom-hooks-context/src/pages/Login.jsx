@@ -92,7 +92,7 @@ const Login = () => {
         </label>
         <input
           type="submit"
-          value='Register'
+          value='Login'
           className="w-full bg-amber-400 p-3 font-medium"
         />
       </div>
